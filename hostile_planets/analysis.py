@@ -236,13 +236,12 @@ def _outcomes_core(view: pd.DataFrame, cond_index: pd.MultiIndex) -> pd.DataFram
     for name, fr in _v_from_jbar(jbar, cond_index).items():
         tab[name] = fr["J"]
     # coverage: number of n in {4,6,8} that contributed to each V
+    arms = set(jbar.index.get_level_values("arm")) if len(jbar) else set()
     for name, (a, b) in V_PAIRS.items():
-        if len(jbar):
-            ja = jbar["J"].xs(a, level="arm") if a in jbar.index.get_level_values("arm") else pd.Series(dtype=float)
-            jb = jbar["J"].xs(b, level="arm") if b in jbar.index.get_level_values("arm") else pd.Series(dtype=float)
-            both = rel(ja, jb).dropna()
-            both = both[both.index.get_level_values("n").isin(NS_AVG)] if len(both) else both
-            cov = both.groupby(level=COND).size().reindex(cond_index) if len(both) else pd.Series(0, index=cond_index)
+        if a in arms and b in arms:
+            r = rel(jbar["J"].xs(a, level="arm"), jbar["J"].xs(b, level="arm")).dropna()
+            r = r[r.index.get_level_values("n").isin(NS_AVG)]
+            cov = r.groupby(level=COND).size().reindex(cond_index) if len(r) else pd.Series(0, index=cond_index)
             tab[f"n_cov_{name}"] = cov.fillna(0).astype(int).values
         else:
             tab[f"n_cov_{name}"] = 0
@@ -313,6 +312,7 @@ def outcomes(sc: pd.DataFrame, which: str = "adv") -> OutcomeResult:
                             "n_seeds": len(seeds)})
         tab[f"unresolved_{y}"] = unres
     spread = pd.DataFrame(spread_rows)
+    spread["unresolved"] = pd.Series([r["unresolved"] for r in spread_rows], dtype=object, index=spread.index)
     tab["n_seeds"] = len(seeds)
     return OutcomeResult(tab.reset_index(), per_seed, spread)
 
@@ -511,6 +511,9 @@ def transfer_test(table: pd.DataFrame, outcome: str | Sequence[str] = tuple(PRIM
         row["supported"] = row["lopo_supported"]  # the gating verdict
         verd.append(row)
     verdicts = pd.DataFrame(verd)
+    for c in ["lopo_supported", "headline_supported", "supported"]:  # keep True/False/None as Python objects
+        if c in verdicts:
+            verdicts[c] = pd.Series([r[c] for r in verd], dtype=object, index=verdicts.index)
     overall = overall_verdict({r["outcome"]: r["supported"] for r in verd})
     return {"metrics": pd.DataFrame(met), "coefs": pd.DataFrame(coefs),
             "predictions": pd.concat(preds, ignore_index=True) if preds else pd.DataFrame(),
