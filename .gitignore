@@ -4,3 +4,4 @@ __pycache__/
 results/raw/smoke*/
 results/raw/eval/*.log
 *.log
+results/raw/chain.out
