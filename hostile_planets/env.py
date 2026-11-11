@@ -445,7 +445,9 @@ class HostileEnv:
         # ---- training reward
         n0 = jnp.maximum(alive0.sum(), 1)
         if mission == "escort":
-            rew = jnp.full(N, C.ESCORT_REW, F) * dJ
+            # potential-based shaping: stay within ESCORT_RING of the (true) VIP position
+            phi = lambda x, v: -jnp.maximum(_norm(x - v) - C.ESCORT_RING, 0.0)
+            rew = C.ESCORT_REW * dJ + C.ESCORT_SHAPE * (phi(pos1, vip_pos1) - phi(s.pos, s.vip_pos))
         else:
             rew = 0.5 * ind + 0.5 * ind.sum() / n0 + shaping
         n_died = died.sum()

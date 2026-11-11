@@ -48,6 +48,8 @@ DEATH_PEN = 1.0
 SEARCH_REW = 4.0
 HAUL_SHAPE = 2.0
 ESCORT_REW = 10.0
+ESCORT_SHAPE = 2.0  # potential-based: escorts are paid for closing to within ESCORT_RING of the VIP
+ESCORT_RING = 0.12
 
 # observation scaling
 AGE_SCALE = 50.0   # ages are reported as clip(age/AGE_SCALE, 0, 1)
