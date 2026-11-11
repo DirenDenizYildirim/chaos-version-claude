@@ -135,7 +135,7 @@ penalty; `team` = sum of individual rewards / live robots):
   the sub-goal)`, sub-goal = goal if carrying at step start else depot. When a
   heavy crate is lost (pair breaks) each surviving member pays
   `-HAUL_SHAPE*((L - d_goal) + d_depot)` so drop-and-return loops earn nothing.
-* escort: `ESCORT_REW * dJ` to every live robot.
+* escort: `ESCORT_REW * dJ` to every live robot, plus potential-based shaping for closing to within 0.12 of the VIP.
 * `protect` arm: a death costs `DEATH_PEN` to the dying robot and
   `0.5*DEATH_PEN` to every other robot alive at the start of that step.
 
