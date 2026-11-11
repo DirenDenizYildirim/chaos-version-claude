@@ -28,3 +28,8 @@ remove_t) of `J`.
 
 Training curves: `results/raw/runs/<planet>__<mission>__<arm>__s<seed>.json`
 (config + per-iteration curve).
+
+`n_ep` is not constant across rows: the default arm's `n = 6` rows (full swarm
+and the three removal conditions) are evaluated with `--n-ep-worth` episodes
+(more than `--n-ep`), because the worth trajectory `W(t)` is a small difference
+of two means.

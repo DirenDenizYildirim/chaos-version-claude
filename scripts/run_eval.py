@@ -23,6 +23,7 @@ def main():
     ap.add_argument("--out", default="results/raw/eval")
     ap.add_argument("--merged", default="results/eval.csv")
     ap.add_argument("--n-ep", type=int, default=128)
+    ap.add_argument("--n-ep-worth", type=int, default=None)
     ap.add_argument("--jobs", type=int, default=4)
     ap.add_argument("--cells", default=None, help="comma list of planet:mission (default all)")
     args = ap.parse_args()
@@ -40,6 +41,8 @@ def main():
         cmd = ["taskset", "-c", str(core), sys.executable, "-m", "hostile_planets.evaluate",
                "--planet", planet, "--mission", mission, "--runs", args.runs, "--br", args.br,
                "--out", args.out, "--n-ep", str(args.n_ep)]
+        if args.n_ep_worth:
+            cmd += ["--n-ep-worth", str(args.n_ep_worth)]
         with open(os.path.join(ROOT, args.out, f"{planet}__{mission}.log"), "w") as log:
             rc = subprocess.call(cmd, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
         cores.put(core)

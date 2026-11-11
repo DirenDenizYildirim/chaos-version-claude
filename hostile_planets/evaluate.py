@@ -113,7 +113,8 @@ def parse_run(path):
     return planet, mission, arm, int(seed[1:])
 
 
-def evaluate_cell(planet, mission, runs_dir, n_ep=128, seed=1234, br_dir=None, max_pool=None):
+def evaluate_cell(planet, mission, runs_dir, n_ep=128, seed=1234, br_dir=None, max_pool=None,
+                  n_ep_worth=None):
     env = HostileEnv(mission)
     learned, scripted = make_eval_fns(env)
     paths = sorted(glob.glob(os.path.join(runs_dir, f"{planet}__{mission}__*.npz")))
@@ -128,19 +129,26 @@ def evaluate_cell(planet, mission, runs_dir, n_ep=128, seed=1234, br_dir=None, m
     rows = []
 
     def run_policy(name, arm, seed_id, robot_params):
-        cs = conds + (conds_rm if arm == "default" else [])
-        keys = jax.random.split(jax.random.PRNGKey(seed), len(cs) * n_ep)  # common random numbers
+        # The default arm's n=6 rows (full swarm and removals) feed the worth trajectory W(t), a small
+        # difference of means, so they get n_ep_worth episodes; everything else gets n_ep.
+        if arm == "default":
+            blocks = [([c for c in conds if c[1] != 6], n_ep),
+                      ([c for c in conds if c[1] == 6] + conds_rm, n_ep_worth or n_ep)]
+        else:
+            blocks = [(conds, n_ep)]
         sources = [("nature", "", any_adv)] + [("adv", a, runs[a][1]) for a in pool]
         if br_dir and name is not None:
             bp = os.path.join(br_dir, f"br__{name}.npz")
             if os.path.exists(bp):
                 sources.append(("br", f"br__{name}", load_params(bp)[1]))
-        for mode, adv_name, adv_params in sources:
-            params = condition_batch(env, planet, arm, mode != "nature", cs, n_ep)
-            out = (scripted(adv_params, params, keys) if robot_params is None
-                   else learned(robot_params, adv_params, params, keys))
-            rows.extend(rows_from(out, cs, n_ep, dict(
-                planet=planet, mission=mission, arm=arm, seed=seed_id, mode=mode, adv_name=adv_name)))
+        for cs, ne in blocks:
+            keys = jax.random.split(jax.random.PRNGKey(seed), len(cs) * ne)  # common random numbers
+            for mode, adv_name, adv_params in sources:
+                params = condition_batch(env, planet, arm, mode != "nature", cs, ne)
+                out = (scripted(adv_params, params, keys) if robot_params is None
+                       else learned(robot_params, adv_params, params, keys))
+                rows.extend(rows_from(out, cs, ne, dict(
+                    planet=planet, mission=mission, arm=arm, seed=seed_id, mode=mode, adv_name=adv_name)))
 
     t0 = time.time()
     for name, (rp, _) in runs.items():
@@ -160,9 +168,12 @@ def main():
     ap.add_argument("--out", default="results/raw/eval")
     ap.add_argument("--n-ep", type=int, default=128)
     ap.add_argument("--max-pool", type=int, default=None)
+    ap.add_argument("--n-ep-worth", type=int, default=None,
+                    help="episodes for the default arm's n=6 rows (worth trajectory); default = --n-ep")
     args = ap.parse_args()
     os.makedirs(args.out, exist_ok=True)
-    df = evaluate_cell(args.planet, args.mission, args.runs, args.n_ep, br_dir=args.br, max_pool=args.max_pool)
+    df = evaluate_cell(args.planet, args.mission, args.runs, args.n_ep, br_dir=args.br, max_pool=args.max_pool,
+                       n_ep_worth=args.n_ep_worth)
     path = os.path.join(args.out, f"{args.planet}__{args.mission}.csv")
     df.to_csv(path, index=False)
     print(f"wrote {path} ({len(df)} rows)")
