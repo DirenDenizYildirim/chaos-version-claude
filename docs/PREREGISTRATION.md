@@ -23,7 +23,7 @@ the final report that is not listed here is labelled *exploratory*.
   a learned hazard adversary (half of the training envs adversarial, half
   "nature" random-walk hazards), swarm size and hazard tempo randomised per env.
   2 seeds per arm (more if compute allows; the number actually used is reported).
-* Evaluation conditions: tempo in {0.3, 0.8, 1.3} x N in {2,3,4,6,8,12} x hazard
+* Evaluation conditions: tempo in {0.1, 0.3, 0.6} x N in {2,3,4,6,8,12} x hazard
   mode in {nature, adversarial}. Adversarial score of a policy = the **minimum
   over a pool of learned adversaries from the same cell** of its mean `J`
   (pool = the adversary co-trained with that policy plus adversaries co-trained
@@ -99,7 +99,7 @@ motion under the adversary, and the worth trajectory.
 ## Validity checks that gate interpretation
 
 * Learned `default` policies must match or beat the scripted heuristic of the
-  same mission in at least 9 of 12 cells (nature, N=6, tempo 0.8); cells that
+  same mission in at least 9 of 12 cells (nature, N=6, tempo 0.3); cells that
   fail are flagged and excluded in a sensitivity analysis.
 * The learned adversary must reduce `J` relative to nature for the `default`
   arm in most cells; a best-response adversary trained against the frozen
@@ -114,3 +114,21 @@ Abstract kinematic simulator; engineered egocentric observations; scripted VIP;
 modest training budgets on 4 CPU cores; one-factor-at-a-time arms (no
 interaction between comm, coupling and protection is estimated); policies are
 trained over randomised tempo/N rather than per condition.
+
+## Amendments made before any grid result existed
+
+Recorded here so the history is honest; all were made after scripted-policy
+balance sweeps and four throw-away 80-iteration training runs, and before the
+grid was launched (see `docs/DESIGN.md` sections 8-9 and the git history).
+
+1. Tempo grid changed from {0.3, 0.8, 1.3} to {0.1, 0.3, 0.6}; the heuristic
+   validity check uses tempo 0.3. Reason: hazards faster than the robots they
+   hunt made several cells unwinnable for any policy.
+2. Constants `RHO_C`, `VIP_SPEED`, `HAUL_NORM` rebalanced and a jam "beacon"
+   coupling mechanic added, for the same reason.
+3. The adversary's training reward gained a potential-based proximity shaping
+   term because the unshaped adversary did not learn in the smoke runs.
+4. `tau_stale` is measured over 90-step windows starting at steps 0/30/60
+   (capped at 90, not T) so that late starts are not censored differently.
+5. Secondary expectation 1 ("decline at the highest tempo") now refers to
+   tempo 0.6 vs 0.3.

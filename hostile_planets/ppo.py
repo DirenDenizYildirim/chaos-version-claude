@@ -32,6 +32,8 @@ class PPOConfig(NamedTuple):
     log_std_init: float = -0.5
     freeze_robot: bool = False
     freeze_adv: bool = False
+    adv_rew_scale: float = 10.0  # adversary reward = -scale*dJ + potential-based proximity shaping
+    adv_shape: float = 1.0
 
 
 # ----------------------------------------------------------------------------- networks
@@ -236,6 +238,14 @@ def init_train_state(key, env, cfg: PPOConfig, robot_params=None, adv_params=Non
     return TrainState(robot_params, adv_params, opt.init(robot_params), opt.init(adv_params))
 
 
+def _adv_target_dist(adv_obs):
+    """Distance from each blob to its natural target (the VIP if there is one, else the
+    nearest live robot), read from the adversary obs. Used for potential-based shaping."""
+    vip, rob = adv_obs[..., 15:17], adv_obs[..., 5:7]
+    has_vip = jnp.abs(vip).sum(-1, keepdims=True) > 0
+    return jnp.linalg.norm(jnp.where(has_vip, vip, rob), axis=-1)
+
+
 def _env_mean(x, sel):
     n = sel.sum()
     return jnp.where(n > 0, jnp.where(sel, x, 0.).sum() / jnp.maximum(n, 1), jnp.nan)
@@ -266,7 +276,8 @@ def make_iteration(env, sample_params: Callable, cfg: PPOConfig):
             out = {"robot": {"obs": obs["robot"], "act": r_act, "logp": r_logp, "val": r_val,
                              "rew": rew["robot"], "mask": obs["robot_mask"].astype(bool)},
                    "adv": {"obs": obs["adv"], "act": a_act, "logp": a_logp, "val": a_val,
-                           "rew": jnp.broadcast_to(rew["adv"][:, None], a_val.shape),
+                           "rew": cfg.adv_rew_scale * rew["adv"][:, None]
+                           + cfg.adv_shape * (_adv_target_dist(obs["adv"]) - _adv_target_dist(obs2["adv"])),
                            "mask": obs["adv_mask"].astype(bool) & adv_on[:, None]},
                    "J": info["J"], "deaths": info["deaths"]}
             return (state, obs2), out

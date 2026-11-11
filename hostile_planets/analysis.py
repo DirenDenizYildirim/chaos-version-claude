@@ -33,7 +33,7 @@ PLANETS = ["corrosion", "jam", "quake", "combined"]
 SINGLE_PLANETS = ["corrosion", "jam", "quake"]
 MISSIONS = ["search", "haul", "escort"]
 ARMS = ["default", "silent", "blackboard", "solo", "protected"]
-TEMPOS = [0.3, 0.8, 1.3]
+TEMPOS = [0.1, 0.3, 0.6]
 NS_ALL = [2, 3, 4, 6, 8, 12]
 NS_AVG = [4, 6, 8]  # outcomes are averaged over these swarm sizes
 N_W = 6  # worth trajectory measured at N = 6
@@ -620,15 +620,15 @@ def secondary_checks(sc: pd.DataFrame, which: str = "adv", out: OutcomeResult | 
          "verdict": "na" if not len(v) else ("pass" if share > 0.5 else "fail")})
 
     w = t.pivot_table(index=CELL, columns="tempo", values="V_comm")
-    if {0.8, 1.3} <= set(w.columns):
-        diff = (w[1.3] - w[0.8]).dropna()
+    if {0.3, 0.6} <= set(w.columns):
+        diff = (w[0.6] - w[0.3]).dropna()
         sh = float((diff < 0).mean()) if len(diff) else np.nan
         res = {"value": float(diff.mean()) if len(diff) else np.nan, "share_cells_decline": sh,
                "n_cells": len(diff), "per_cell": {f"{p}/{m}": d for (p, m), d in diff.items()}}
         res["verdict"] = _dir_verdict(None if not len(diff) else bool(diff.mean() < 0), sh)
     else:
         res = {"value": np.nan, "verdict": "na"}
-    add("1b", "V_comm declines at the highest tempo", "mean over cells of V_comm(tempo 1.3) - V_comm(tempo 0.8)", res)
+    add("1b", "V_comm declines at the highest tempo", "mean over cells of V_comm(tempo 0.6) - V_comm(tempo 0.3)", res)
 
     add("1c", "V_comm decreases as S grows (weak, non-monotone would not surprise)",
         "Spearman rho(V_comm, log S): pooled; per-cell share negative", _corr_check(t, "V_comm"))
@@ -772,8 +772,8 @@ def validity_checks(sc: pd.DataFrame) -> dict:
     """
     nat = score_view(sc, "nature")
     cells = pd.MultiIndex.from_product([PLANETS, MISSIONS], names=CELL)
-    # (1) learned default vs scripted heuristic: nature, n=6, tempo 0.8
-    sel = nat[(nat["n"] == 6) & np.isclose(nat["tempo"], 0.8) & (nat["remove_t"] == -1)]
+    # (1) learned default vs scripted heuristic: nature, n=6, tempo 0.3
+    sel = nat[(nat["n"] == 6) & np.isclose(nat["tempo"], 0.3) & (nat["remove_t"] == -1)]
 
     def agg(arm):
         d = sel[sel["arm"] == arm]

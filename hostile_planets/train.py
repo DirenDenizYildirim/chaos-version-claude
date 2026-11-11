@@ -48,7 +48,7 @@ from hostile_planets import ppo  # noqa: E402
 DEFAULTS = dict(
     mission="search", planet="corrosion", comm="gossip", coupling=1, protect=0, seed=0,
     iters=300, n_envs=256, out="results/raw", name=None, adv_frac=0.5,
-    tempo_choices=(0.3, 0.8, 1.3), n_choices=(2, 3, 4, 6, 8, 12),
+    tempo_choices=(0.1, 0.3, 0.6), n_choices=(2, 3, 4, 6, 8, 12),
     lr=5e-4, ent_coef=0.003, n_epochs=3, n_minibatches=4,
     freeze_robot=False, freeze_adv=False, init_from=None,
     env_module="hostile_planets.env", save_every=25, log_every=10, verbose=True,

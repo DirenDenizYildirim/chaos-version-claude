@@ -298,9 +298,15 @@ class HostileEnv:
         pidx = jnp.maximum(partner, 0)
 
         # ---- robot motion (effects use the in-situ fields the robots just observed)
-        theta = jax.random.uniform(k_rot, (N,), F, -jnp.pi, jnp.pi) * f_j
+        # beacon: a live teammate in sensing range that is itself outside the jam damps nav error
+        d0 = _pairwise(s.pos)
+        clear = alive0 & (f_j < C.BEACON_CLEAR)
+        beacon = p.coupling & ((d0 < C.R_SENSE) & clear[None, :] & ~eye).any(1)
+        beaconed = beacon & alive0 & (f_j > 0.05)
+        theta = jax.random.uniform(k_rot, (N,), F, -jnp.pi, jnp.pi) * f_j \
+            * (1.0 - C.BEACON_GAIN * beacon)
         dirv = _rotate(cmd, theta)
-        close = (_pairwise(s.pos) < C.R_CROWD) & alive0[None, :] & ~eye \
+        close = (d0 < C.R_CROWD) & alive0[None, :] & ~eye \
             & (partner[:, None] != idx[None, :])
         crowd = 1.0 / (1.0 + 0.5 * close.sum(1))
         load = jnp.where(carry > 0, C.LOAD_SLOW, 1.0)
@@ -327,7 +333,7 @@ class HostileEnv:
 
         fld1, grad1 = fields(pos1, bpos1, p.amp)
         d1 = _pairwise(pos1)
-        coupled = jnp.zeros(N, bool)
+        coupled = beaconed
         extra_dose = jnp.zeros(N, F)
 
         # ---- VIP (escort)
@@ -347,7 +353,9 @@ class HostileEnv:
             ahead = (rad @ g) < 0
             steer = g + jnp.sum(w[:, None] * (C.VIP_REP * rad + C.VIP_TAN * ahead[:, None] * perp), 0)
             steer = jnp.where(_norm(steer) < 1e-4, g, _unit(steer))
-            steer = _rotate(steer, jax.random.uniform(kv1, (), F, -jnp.pi, jnp.pi) * s.vip_fld[1])
+            vip_beacon = p.coupling & (clear & (_norm(s.pos - s.vip_pos) < C.R_SENSE)).any()
+            steer = _rotate(steer, jax.random.uniform(kv1, (), F, -jnp.pi, jnp.pi) * s.vip_fld[1]
+                            * (1.0 - C.BEACON_GAIN * vip_beacon))
             vcap = C.VIP_SPEED * C.V0 * (0.4 + 0.6 * s.vip_h) * (1 - C.QUAKE_SLOW * s.vip_fld[2])
             vslip = jax.random.normal(kv2, (2,), F) * C.QUAKE_SLIP * C.V0 * s.vip_fld[2]
             vmob = active & (s.vip_stuck == 0)

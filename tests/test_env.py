@@ -151,7 +151,7 @@ def test_corrosion_kills_in_blob_core():
     p = env.make_params(planet="corrosion", n_robots=4, tempo=0.0)
     s, _ = env.reset(jax.random.PRNGKey(0), p)
     s = place(env, s, p, pos=jnp.tile(CENTRE[None], (N, 1)), bpos=all_blobs(CENTRE))
-    s1, (traj, rew, info) = run_steps(env, s, p, IDLE, 40)
+    s1, (traj, rew, info) = run_steps(env, s, p, IDLE, 60)
     assert not bool(s1.alive.any()) and float(s1.deaths) == 4.0
     h = np.asarray(traj.h)[:, :4]
     assert np.all(np.diff(h, axis=0) <= 1e-7)               # health never recovers
@@ -170,7 +170,7 @@ def test_death_penalty_only_in_protect_arm():
         s, _ = env.reset(jax.random.PRNGKey(0), p)
         s = place(env, s, p, pos=jnp.tile(CENTRE[None], (N, 1)), bpos=all_blobs(CENTRE),
                   targets=jnp.zeros((C.M_TARGETS, 2)))
-        _, (_, rew, _) = run_steps(env, s, p, IDLE, 40)
+        _, (_, rew, _) = run_steps(env, s, p, IDLE, 60)
         out[protect] = float(rew["robot"].sum())
     assert out[False] == 0.0
     # all four die on the same step: each pays DEATH_PEN + 0.5*DEATH_PEN per other death
@@ -270,7 +270,9 @@ def test_quake_traps_and_rescue_needs_coupling():
     assert stuck.max() == C.D_STUCK and float(info["stuck_frac"].max()) == 1.0
     first = int(np.argmax(stuck > 0))
     assert np.isclose(float(traj.h[first, 0]), 1 - C.TRAP_DAMAGE)
-    assert np.all(np.asarray(traj.pos)[stuck > 0, 0] == np.asarray(traj.pos)[first, 0])
+    held = (stuck[1:] > 0) & (stuck[1:] < stuck[:-1])       # still inside the same trap episode
+    x = np.asarray(traj.pos)[:, 0]
+    assert held.sum() > 10 and np.all(x[1:][held] == x[:-1][held])
 
     # rescue: a stuck robot with a free teammate 0.03 away, no hazard around
     steps_alone = C.D_STUCK

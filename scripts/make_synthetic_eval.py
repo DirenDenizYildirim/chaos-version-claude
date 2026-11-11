@@ -18,7 +18,7 @@ import pandas as pd
 PLANETS = ["corrosion", "jam", "quake", "combined"]
 MISSIONS = ["search", "haul", "escort"]
 ARMS = ["default", "silent", "blackboard", "solo", "protected"]
-TEMPOS = [0.3, 0.8, 1.3]
+TEMPOS = [0.1, 0.3, 0.6]
 NS = [2, 3, 4, 6, 8, 12]
 MODES = ["nature", "adv"]
 

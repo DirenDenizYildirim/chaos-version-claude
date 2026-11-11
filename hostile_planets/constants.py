@@ -8,10 +8,12 @@ NB = N_TYPES * K   # blob b has type b // K
 V0 = 0.03          # robot top speed (arena units / step)
 
 SIGMA = 0.09       # blob field f = amp*exp(-d^2/(2 SIGMA^2)), summed per type, clipped to [0,1]
-RHO_C = 0.035      # health loss / step at corrosion f=1
+RHO_C = 0.02       # health loss / step at corrosion f=1
 RHO_AMB = 0.0015   # ambient health loss / step (corrosion + combined planets)
 JAM_SENSE = 0.8    # sensing radius multiplier (1 - JAM_SENSE*f_jam)
 P_LOSS_AMB = 0.05  # ambient packet loss
+BEACON_GAIN = 0.7  # nav-error reduction with an un-jammed live teammate within R_SENSE (coupling on)
+BEACON_CLEAR = 0.3 # a teammate counts as un-jammed below this jam field
 QUAKE_SLOW = 0.6   # speed multiplier (1 - QUAKE_SLOW*f_quake)
 QUAKE_SLIP = 0.4   # slip std = QUAKE_SLIP*V0*f_quake
 P_TRAP = 0.15      # per-step trap prob = P_TRAP*f_quake^2 (only while not stuck)
@@ -33,13 +35,13 @@ BLOB_LO, BLOB_HI = 0.05, 0.95   # blob centres reflect at these walls
 NATURE_TURN_STD = 0.3           # heading random-walk std (rad / step) for nature blobs
 
 LOAD_SLOW = 0.6    # speed multiplier while carrying
-VIP_SPEED = 0.45   # x V0
+VIP_SPEED = 0.6    # x V0
 VIP_REP = 1.5      # VIP potential field: radial repulsion gain
 VIP_TAN = 1.0      # VIP potential field: tangential (go-around) gain
 VIP_MEM = 30.0     # VIP recency weight exp(-age/VIP_MEM)
 M_TARGETS = 16
 GRID = 8
-HAUL_NORM = 40.0   # J_haul = units delivered / HAUL_NORM
+HAUL_NORM = 12.0   # J_haul = units delivered / HAUL_NORM
 
 # training-reward scales (the metric J never includes these)
 DEATH_PEN = 1.0
