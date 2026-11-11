@@ -132,3 +132,7 @@ grid was launched (see `docs/DESIGN.md` sections 8-9 and the git history).
    (capped at 90, not T) so that late starts are not censored differently.
 5. Secondary expectation 1 ("decline at the highest tempo") now refers to
    tempo 0.6 vs 0.3.
+6. Escort metric changed to time-averaged progress x health factor (the
+   end-point metric saturated at 1 with 3x time slack), and in `search` the
+   adversary observes the nearest unfound target. Both after smoke runs showed
+   ceiling effects / an adversary with nothing to aim at.

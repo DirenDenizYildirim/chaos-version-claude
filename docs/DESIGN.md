@@ -122,7 +122,7 @@ Anchors: a *left* anchor `x~U(.1,.2), y~U(.2,.8)` and a *right* anchor
   trapped VIP (within `R_LINK`, coupling on), and by shielding: each escort
   within `R_LINK` with `e>0` (max 2, coupling on) halves the VIP's *blob*
   corrosion dose (ambient ageing cannot be shielded); the diverted dose is split
-  equally among the shielders. `J = progress * (0.3 + 0.7*h_vip)` at T, progress =
+  equally among the shielders. `J = mean_t(progress_t) * (0.3 + 0.7*h_vip(T))` (time-averaged progress, so delay costs; ~0.87 unobstructed), progress =
   1 - remaining/initial distance (1 on arrival; VIP safe once arrived; frozen if dead).
 
 Training reward per robot (the *metric* `J` never includes shaping or the death
@@ -209,7 +209,8 @@ before the grid was trained: `RHO_C 0.035 -> 0.02` and `HAUL_NORM 40 -> 12`
 `{0.3, 0.8, 1.3} -> {0.1, 0.3, 0.6}` (a hazard faster than its prey always
 wins, which made escort unwinnable), and the jam *beacon* coupling mechanic was
 added (escorts could do nothing against jamming, so that cell could not
-distinguish arms). Every hazard now has one co-presence countermeasure:
+distinguish arms). The escort metric became time-averaged progress (the
+end-point metric had no time pressure and saturated at 1). Every hazard now has one co-presence countermeasure:
 corrosion -> shielding (VIP), jam -> beacon, quake -> rescue; haul adds joint
 carry. The `solo` arm disables all of them.
 
@@ -220,3 +221,5 @@ The adversary's objective is `-J`. Its training reward per blob is
 (escort) or the nearest live robot. The second term is potential-based shaping
 (it telescopes to `d_0 - d_T`); without it the adversary did not learn to
 approach the swarm within the training budget. Evaluation uses `J` only.
+In `search` the adversary's "VIP" slot holds the nearest unfound target, so
+blobs can learn to guard what the swarm is looking for.

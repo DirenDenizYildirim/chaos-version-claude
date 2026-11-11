@@ -48,7 +48,7 @@ Adversary observation per blob (``adv_obs_dim = 20``; the adversary is omniscien
     0:2 own centre * 2 - 1      2:5 type one-hot
     5:7 rel pos nearest live robot     7:9 rel pos second nearest live robot
     9:11 rel pos swarm centroid        11:13 rel pos left anchor
-    13:15 rel pos right anchor         15:17 rel pos VIP (escort, else 0)
+    13:15 rel pos right anchor         15:17 rel pos VIP (escort) or nearest unfound target (search), else 0
     17 t / T     18 own amplitude     19 tempo
 
 Episodes have fixed length ``T``; callers must ``reset`` after ``done``.
@@ -117,6 +117,7 @@ class EnvState(NamedTuple):
     # mission
     targets: jnp.ndarray; found: jnp.ndarray
     delivered: jnp.ndarray
+    prog_sum: jnp.ndarray                         # escort: sum over steps of VIP progress
     vip_pos: jnp.ndarray; vip_h: jnp.ndarray; vip_stuck: jnp.ndarray
     vip_arrived: jnp.ndarray; vip_fld: jnp.ndarray
     vip_b_pos: jnp.ndarray; vip_b_t: jnp.ndarray
@@ -250,7 +251,7 @@ class HostileEnv:
             hub_v_val=z(VIP_DIM, F), hub_v_t=-jnp.ones((), F),
             hub_vis=z(G2, bool),
             targets=jax.random.uniform(k_t, (C.M_TARGETS, 2), F, 0.03, 0.97),
-            found=z(C.M_TARGETS, bool), delivered=z((), F),
+            found=z(C.M_TARGETS, bool), delivered=z((), F), prog_sum=z((), F),
             vip_pos=left, vip_h=jnp.ones((), F), vip_stuck=z((), jnp.int32),
             vip_arrived=z((), bool), vip_fld=vip_fld,
             vip_b_pos=z((NB, 2), F), vip_b_t=-jnp.ones(NB, F),
@@ -397,7 +398,7 @@ class HostileEnv:
 
         # ---- mission
         ind = jnp.zeros(N, F)
-        found1, delivered1 = s.found, s.delivered
+        found1, delivered1, prog_sum1 = s.found, s.delivered, s.prog_sum
         if mission == "search":
             r_det = C.R_DET * (1 - C.JAM_SENSE * fld1[:, 1])
             dt = _norm(pos1[:, None, :] - s.targets[None, :, :])
@@ -436,7 +437,9 @@ class HostileEnv:
         else:  # escort
             prog = jnp.where(vip_arrived1, 1.0,
                              jnp.clip(1.0 - _norm(vip_pos1 - goal) / haul_len, 0.0, 1.0))
-            J1 = prog * (0.3 + 0.7 * vip_h1)
+            # time-averaged progress: arriving sooner scores higher (max ~0.87 unobstructed)
+            prog_sum1 = s.prog_sum + prog
+            J1 = (prog_sum1 / C.T) * (0.3 + 0.7 * vip_h1)
         dJ = J1 - s.J
 
         # ---- training reward
@@ -452,7 +455,7 @@ class HostileEnv:
         s1 = s._replace(
             t=t1, pos=pos1, h=h1, present=present, alive=alive1, stuck=stuck1,
             fld=fld1, grad=grad1, carry=carry, partner=partner, coupled=coupled & alive1,
-            bpos=bpos1, bdir=bdir, found=found1, delivered=delivered1,
+            bpos=bpos1, bdir=bdir, found=found1, delivered=delivered1, prog_sum=prog_sum1,
             vip_pos=vip_pos1, vip_h=vip_h1, vip_stuck=vip_stuck1, vip_arrived=vip_arrived1,
             vip_fld=vip_fld1, J=J1, deaths=s.deaths + n_died)
         s1 = self._sense_comm(s1, k_comm, p)
@@ -675,7 +678,15 @@ class HostileEnv:
         n = jnp.maximum(s.alive.sum(), 1)
         cen = (jnp.sum(s.alive[:, None] * s.pos, 0) / n)[None] - s.bpos
         cen = cen * (s.alive.sum() > 0)
-        vip = (s.vip_pos[None] - s.bpos) if self.mission == "escort" else jnp.zeros((NB, 2), F)
+        if self.mission == "escort":
+            vip = s.vip_pos[None] - s.bpos
+        elif self.mission == "search":  # the mission-critical object is the nearest unfound target
+            relt = s.targets[None, :, :] - s.bpos[:, None, :]
+            dt = jnp.where(s.found[None, :], INF, _norm(relt))
+            jt = jnp.argmin(dt, 1)
+            vip = relt[ib, jt] * (dt[ib, jt] < INF)[:, None]
+        else:
+            vip = jnp.zeros((NB, 2), F)
         types = jax.nn.one_hot(ib // C.K, C.N_TYPES, dtype=F)
         return jnp.concatenate([
             s.bpos * 2 - 1, types, pick(j1), pick(j2), cen,
