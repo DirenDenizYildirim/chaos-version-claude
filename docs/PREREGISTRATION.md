@@ -126,8 +126,11 @@ grid was launched (see `docs/DESIGN.md` sections 8-9 and the git history).
    hunt made several cells unwinnable for any policy.
 2. Constants `RHO_C`, `VIP_SPEED`, `HAUL_NORM` rebalanced and a jam "beacon"
    coupling mechanic added, for the same reason.
-3. The adversary's training reward gained a potential-based proximity shaping
-   term because the unshaped adversary did not learn in the smoke runs.
+3. The adversary became a learned residual on a scripted pursuit prior, with a
+   potential-based proximity shaping term in its training reward, because a
+   from-scratch adversary did not learn to pressure the swarm in three rounds
+   of smoke runs. The "learned adversary" in this study is therefore a learned
+   correction to pursuit, not a from-scratch policy.
 4. `tau_stale` is measured over 90-step windows starting at steps 0/30/60
    (capped at 90, not T) so that late starts are not censored differently.
 5. Secondary expectation 1 ("decline at the highest tempo") now refers to

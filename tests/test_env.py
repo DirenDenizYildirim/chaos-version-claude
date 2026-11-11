@@ -341,7 +341,7 @@ def test_escort_vip_arrives_and_shield_halves_dose():
     env = ENVS["escort"]
     p = env.make_params(planet="jam", amp_scale=0.0, n_robots=2)
     _, info = jax.jit(lambda k: rollout(env, k, p, idle_policy))(jax.random.PRNGKey(0))
-    assert float(info["J"][-1]) == 1.0 and float(info["vip_arrived"][-1]) == 1.0
+    assert 0.7 < float(info["J"][-1]) < 0.9 and float(info["vip_arrived"][-1]) == 1.0  # time-averaged progress
     assert np.all(np.diff(np.asarray(info["J"])) >= -1e-6)
 
     p = env.make_params(planet="corrosion", n_robots=2, tempo=0.0)

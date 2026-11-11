@@ -33,7 +33,7 @@ class PPOConfig(NamedTuple):
     freeze_robot: bool = False
     freeze_adv: bool = False
     adv_rew_scale: float = 10.0  # adversary reward = -scale*dJ + potential-based proximity shaping
-    adv_shape: float = 1.0
+    adv_shape: float = 3.0
 
 
 # ----------------------------------------------------------------------------- networks
@@ -84,18 +84,43 @@ def sample_action(params, obs, key):
     return act, gauss_logp(act, mean, log_std), value
 
 
+def adv_target(adv_obs):
+    """Vector from each blob to its natural target, read from the adversary obs: the
+    mission-critical object if the env exposes one (VIP / nearest unfound target), else
+    the nearest live robot."""
+    rob = adv_obs[..., 5:7]
+    if adv_obs.shape[-1] < 17:
+        return rob
+    crit = adv_obs[..., 15:17]
+    return jnp.where(jnp.abs(crit).sum(-1, keepdims=True) > 0, crit, rob)
+
+
+def adv_prior(adv_obs):
+    """Pursuit prior: unit vector toward the target. The adversary network learns a
+    residual on top of it, so the swarm faces a competent adversary from iteration 0."""
+    v = adv_target(adv_obs)
+    return v / jnp.maximum(jnp.linalg.norm(v, axis=-1, keepdims=True), 1e-6)
+
+
+def _adv_target_dist(adv_obs):
+    return jnp.linalg.norm(adv_target(adv_obs), axis=-1)
+
+
 def make_policy_fns(robot_params, adv_params, deterministic: bool):
     """Returns policy_fn(obs_robot [N_MAX,obs_dim], key) -> [N_MAX,3] and
-    adv_fn(obs_adv [NB,adv_obs_dim], key) -> [NB,2] (unclipped; the env clips).
+    adv_fn(obs_adv [NB,adv_obs_dim], key) -> [NB,2] (unclipped; the env clips). The adversary
+    output is a learned residual added to the pursuit prior.
     Both also work with extra leading batch dims."""
-    def make(params):
+    def make(params, prior):
         def fn(obs, key):
             mean, log_std, _ = forward(params, obs)
+            if prior:
+                mean = mean + adv_prior(obs)
             if deterministic:
                 return mean
             return mean + jnp.exp(log_std) * jax.random.normal(key, mean.shape)
         return fn
-    return make(robot_params), make(adv_params)
+    return make(robot_params, False), make(adv_params, True)
 
 
 # ----------------------------------------------------------------------------- params io
@@ -238,14 +263,6 @@ def init_train_state(key, env, cfg: PPOConfig, robot_params=None, adv_params=Non
     return TrainState(robot_params, adv_params, opt.init(robot_params), opt.init(adv_params))
 
 
-def _adv_target_dist(adv_obs):
-    """Distance from each blob to its natural target (the VIP if there is one, else the
-    nearest live robot), read from the adversary obs. Used for potential-based shaping."""
-    vip, rob = adv_obs[..., 15:17], adv_obs[..., 5:7]
-    has_vip = jnp.abs(vip).sum(-1, keepdims=True) > 0
-    return jnp.linalg.norm(jnp.where(has_vip, vip, rob), axis=-1)
-
-
 def _env_mean(x, sel):
     n = sel.sum()
     return jnp.where(n > 0, jnp.where(sel, x, 0.).sum() / jnp.maximum(n, 1), jnp.nan)
@@ -271,7 +288,7 @@ def make_iteration(env, sample_params: Callable, cfg: PPOConfig):
             k_r, k_a, k_e = jax.random.split(k, 3)
             r_act, r_logp, r_val = sample_action(ts.robot, obs["robot"], k_r)
             a_act, a_logp, a_val = sample_action(ts.adv, obs["adv"], k_a)
-            a_env = jnp.where(adv_on[:, None, None], a_act, 0.)
+            a_env = jnp.where(adv_on[:, None, None], a_act + adv_prior(obs["adv"]), 0.)  # residual on pursuit prior
             state, obs2, rew, done, info = v_step(jax.random.split(k_e, B), state, r_act, a_env, params)
             out = {"robot": {"obs": obs["robot"], "act": r_act, "logp": r_logp, "val": r_val,
                              "rew": rew["robot"], "mask": obs["robot_mask"].astype(bool)},

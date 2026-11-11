@@ -216,8 +216,10 @@ carry. The `solo` arm disables all of them.
 
 ## 9. Adversary training reward
 
-The adversary's objective is `-J`. Its training reward per blob is
-`-10*dJ + 1.0*(d_t - d_{t+1})`, where `d` is the blob's distance to the VIP
+The adversary's objective is `-J`. Its action is a learned residual added to
+a pursuit prior (unit vector toward its target), so the swarm trains against a
+competent adversary from iteration 0 instead of waiting for one to emerge. Its
+training reward per blob is `-10*dJ + 3.0*(d_t - d_{t+1})`, where `d` is the blob's distance to the VIP
 (escort) or the nearest live robot. The second term is potential-based shaping
 (it telescopes to `d_0 - d_T`); without it the adversary did not learn to
 approach the swarm within the training budget. Evaluation uses `J` only.
