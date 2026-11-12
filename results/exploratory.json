@@ -1,0 +1,380 @@
+{
+ "heuristic_vs_learned": [
+  {
+   "planet": "combined",
+   "mission": "escort",
+   "score": "nature",
+   "J_default_all": 0.7274583433,
+   "J_heuristic_all": 0.7585961394,
+   "J_default_n6_t03": 0.723650725,
+   "J_heuristic_n6_t03": 0.75742024,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "combined",
+   "mission": "haul",
+   "score": "nature",
+   "J_default_all": 0.4873951247,
+   "J_heuristic_all": 0.4017650544,
+   "J_default_n6_t03": 0.518229175,
+   "J_heuristic_n6_t03": 0.4557292,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "combined",
+   "mission": "search",
+   "score": "nature",
+   "J_default_all": 0.4405749922,
+   "J_heuristic_all": 0.4841972294,
+   "J_default_n6_t03": 0.47798339,
+   "J_heuristic_n6_t03": 0.5474219,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "corrosion",
+   "mission": "escort",
+   "score": "nature",
+   "J_default_all": 0.7685486514,
+   "J_heuristic_all": 0.7855725622,
+   "J_default_n6_t03": 0.7764763,
+   "J_heuristic_n6_t03": 0.7952018,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "corrosion",
+   "mission": "haul",
+   "score": "nature",
+   "J_default_all": 0.5325340075,
+   "J_heuristic_all": 0.3717447978,
+   "J_default_n6_t03": 0.56575522,
+   "J_heuristic_n6_t03": 0.38867188,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "corrosion",
+   "mission": "search",
+   "score": "nature",
+   "J_default_all": 0.4897559508,
+   "J_heuristic_all": 0.5498041306,
+   "J_default_n6_t03": 0.52565593,
+   "J_heuristic_n6_t03": 0.6294531,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "jam",
+   "mission": "escort",
+   "score": "nature",
+   "J_default_all": 0.8514001253,
+   "J_heuristic_all": 0.8492141022,
+   "J_default_n6_t03": 0.8539076,
+   "J_heuristic_n6_t03": 0.8541354,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "jam",
+   "mission": "haul",
+   "score": "nature",
+   "J_default_all": 0.5865523842,
+   "J_heuristic_all": 0.5367476944,
+   "J_default_n6_t03": 0.62695313,
+   "J_heuristic_n6_t03": 0.5839844,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "jam",
+   "mission": "search",
+   "score": "nature",
+   "J_default_all": 0.4730122378,
+   "J_heuristic_all": 0.566081815,
+   "J_default_n6_t03": 0.513150975,
+   "J_heuristic_n6_t03": 0.6299447,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "quake",
+   "mission": "escort",
+   "score": "nature",
+   "J_default_all": 0.8103659675,
+   "J_heuristic_all": 0.8215941339,
+   "J_default_n6_t03": 0.8097467,
+   "J_heuristic_n6_t03": 0.81964993,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "quake",
+   "mission": "haul",
+   "score": "nature",
+   "J_default_all": 0.529911765,
+   "J_heuristic_all": 0.5555917317,
+   "J_default_n6_t03": 0.572916675,
+   "J_heuristic_n6_t03": 0.60091144,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "quake",
+   "mission": "search",
+   "score": "nature",
+   "J_default_all": 0.4499269369,
+   "J_heuristic_all": 0.5536306422,
+   "J_default_n6_t03": 0.497980115,
+   "J_heuristic_n6_t03": 0.62108076,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "combined",
+   "mission": "escort",
+   "score": "adv",
+   "J_default_all": 0.3275474452,
+   "J_heuristic_all": 0.3803237442,
+   "J_default_n6_t03": 0.283441335,
+   "J_heuristic_n6_t03": 0.3641147,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "combined",
+   "mission": "haul",
+   "score": "adv",
+   "J_default_all": 0.1975188091,
+   "J_heuristic_all": 0.1781322366,
+   "J_default_n6_t03": 0.16634115,
+   "J_heuristic_n6_t03": 0.19270834,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "combined",
+   "mission": "search",
+   "score": "adv",
+   "J_default_all": 0.4105833967,
+   "J_heuristic_all": 0.3281935428,
+   "J_default_n6_t03": 0.44958495,
+   "J_heuristic_n6_t03": 0.34456056,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "corrosion",
+   "mission": "escort",
+   "score": "adv",
+   "J_default_all": 0.5383705539,
+   "J_heuristic_all": 0.58640792,
+   "J_default_n6_t03": 0.62738645,
+   "J_heuristic_n6_t03": 0.71741414,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "corrosion",
+   "mission": "haul",
+   "score": "adv",
+   "J_default_all": 0.2640697392,
+   "J_heuristic_all": 0.1769748279,
+   "J_default_n6_t03": 0.26399739,
+   "J_heuristic_n6_t03": 0.15169269,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "corrosion",
+   "mission": "search",
+   "score": "adv",
+   "J_default_all": 0.5033191325,
+   "J_heuristic_all": 0.4352846461,
+   "J_default_n6_t03": 0.55234698,
+   "J_heuristic_n6_t03": 0.4670475,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "jam",
+   "mission": "escort",
+   "score": "adv",
+   "J_default_all": 0.5794817603,
+   "J_heuristic_all": 0.6346150789,
+   "J_default_n6_t03": 0.599573315,
+   "J_heuristic_n6_t03": 0.6633915,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "jam",
+   "mission": "haul",
+   "score": "adv",
+   "J_default_all": 0.3688331961,
+   "J_heuristic_all": 0.3870804567,
+   "J_default_n6_t03": 0.38183594,
+   "J_heuristic_n6_t03": 0.43489584,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "jam",
+   "mission": "search",
+   "score": "adv",
+   "J_default_all": 0.4141174681,
+   "J_heuristic_all": 0.4677374522,
+   "J_default_n6_t03": 0.44425455,
+   "J_heuristic_n6_t03": 0.49972332,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "quake",
+   "mission": "escort",
+   "score": "adv",
+   "J_default_all": 0.5074685247,
+   "J_heuristic_all": 0.5034059778,
+   "J_default_n6_t03": 0.5332284,
+   "J_heuristic_n6_t03": 0.5590629,
+   "learned_ge_heuristic_all": true
+  },
+  {
+   "planet": "quake",
+   "mission": "haul",
+   "score": "adv",
+   "J_default_all": 0.2805808829,
+   "J_heuristic_all": 0.3612919656,
+   "J_default_n6_t03": 0.25716145,
+   "J_heuristic_n6_t03": 0.37109375,
+   "learned_ge_heuristic_all": false
+  },
+  {
+   "planet": "quake",
+   "mission": "search",
+   "score": "adv",
+   "J_default_all": 0.4229564514,
+   "J_heuristic_all": 0.4333904806,
+   "J_default_n6_t03": 0.466500655,
+   "J_heuristic_n6_t03": 0.4817676,
+   "learned_ge_heuristic_all": false
+  }
+ ],
+ "matched_mean_transfer": [
+  {
+   "outcome": "V_comm",
+   "n": 9,
+   "mae_matched_mean": 0.0501235367,
+   "rho_matched_mean": 0.9333333333,
+   "mae_P": 0.0660301025,
+   "rho_P": 0.4666666667,
+   "mae_B0": 0.0748676484,
+   "rho_B0": null,
+   "mae_B1": 0.068343959,
+   "rho_B1": 0.474341649,
+   "mae_B2": 0.0677699079,
+   "rho_B2": 0.6833333333
+  },
+  {
+   "outcome": "V_gossip",
+   "n": 9,
+   "mae_matched_mean": 0.0564985233,
+   "rho_matched_mean": 0.75,
+   "mae_P": 0.0777947568,
+   "rho_P": 0.0833333333,
+   "mae_B0": 0.0827181651,
+   "rho_B0": null,
+   "mae_B1": 0.0770370268,
+   "rho_B1": 0.158113883,
+   "mae_B2": 0.073128562,
+   "rho_B2": 0.4166666667
+  },
+  {
+   "outcome": "V_couple",
+   "n": 9,
+   "mae_matched_mean": 0.0346210285,
+   "rho_matched_mean": 0.9833333333,
+   "mae_P": 0.0508534661,
+   "rho_P": 0.4,
+   "mae_B0": 0.0605470121,
+   "rho_B0": null,
+   "mae_B1": 0.0356445856,
+   "rho_B1": 0.790569415,
+   "mae_B2": 0.0359501854,
+   "rho_B2": 0.75
+  },
+  {
+   "outcome": "V_sac",
+   "n": 9,
+   "mae_matched_mean": 0.0356850157,
+   "rho_matched_mean": 0.3833333333,
+   "mae_P": 0.0353629288,
+   "rho_P": 0.6333333333,
+   "mae_B0": 0.0375698566,
+   "rho_B0": null,
+   "mae_B1": 0.0367175042,
+   "rho_B1": 0.158113883,
+   "mae_B2": 0.0366125143,
+   "rho_B2": 0.0833333333
+  },
+  {
+   "outcome": "beta",
+   "n": 9,
+   "mae_matched_mean": 0.1095079901,
+   "rho_matched_mean": 0.9833333333,
+   "mae_P": 0.318594695,
+   "rho_P": 0.8333333333,
+   "mae_B0": 0.4533690158,
+   "rho_B0": null,
+   "mae_B1": 0.141538929,
+   "rho_B1": 0.9486832981,
+   "mae_B2": 0.1434915844,
+   "rho_B2": 0.95
+  },
+  {
+   "outcome": "loss_default",
+   "n": 9,
+   "mae_matched_mean": 0.2264921712,
+   "rho_matched_mean": 0.7666666667,
+   "mae_P": 0.1593166128,
+   "rho_P": 0.35,
+   "mae_B0": 0.2303256365,
+   "rho_B0": null,
+   "mae_B1": 0.2264921712,
+   "rho_B1": 0.5270462767,
+   "mae_B2": 0.2264921712,
+   "rho_B2": 0.85
+  }
+ ],
+ "identical_arms": [
+  {
+   "planet": "corrosion",
+   "mission": "search",
+   "seed": 0,
+   "arm_identical_to_default": "solo"
+  },
+  {
+   "planet": "corrosion",
+   "mission": "search",
+   "seed": 1,
+   "arm_identical_to_default": "solo"
+  },
+  {
+   "planet": "jam",
+   "mission": "escort",
+   "seed": 0,
+   "arm_identical_to_default": "protected"
+  },
+  {
+   "planet": "jam",
+   "mission": "escort",
+   "seed": 1,
+   "arm_identical_to_default": "protected"
+  },
+  {
+   "planet": "jam",
+   "mission": "haul",
+   "seed": 0,
+   "arm_identical_to_default": "protected"
+  },
+  {
+   "planet": "jam",
+   "mission": "haul",
+   "seed": 1,
+   "arm_identical_to_default": "protected"
+  },
+  {
+   "planet": "jam",
+   "mission": "search",
+   "seed": 0,
+   "arm_identical_to_default": "protected"
+  },
+  {
+   "planet": "jam",
+   "mission": "search",
+   "seed": 1,
+   "arm_identical_to_default": "protected"
+  }
+ ]
+}

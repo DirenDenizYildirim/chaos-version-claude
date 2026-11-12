@@ -41,6 +41,7 @@ REMOVE_TS = [0, 50, 100]
 LAMBDAS = [0.25, 0.5, 0.75]
 T_HORIZON = 150
 
+WORTH_FULL = -2   # remove_t label of full-swarm rows evaluated on the worth block (see evaluate.py)
 KEY = ["planet", "mission", "arm", "seed", "tempo", "n", "remove_t"]
 COND = ["planet", "mission", "tempo"]
 CELL = ["planet", "mission"]
@@ -346,7 +347,9 @@ def principles(sc: pd.DataFrame, which: str = "adv") -> pd.DataFrame:
         s = jm[jm.index.get_level_values("remove_t") == t]
         return s.droplevel("remove_t").reindex(cond_index) if len(s) else pd.Series(np.nan, index=cond_index)
 
-    jfull = _get(-1)
+    jfull = _get(WORTH_FULL)          # full swarm evaluated on the worth block's episodes, if present
+    if jfull.isna().all():
+        jfull = _get(-1)
     tab["J_full_n6"] = jfull.values
     for t, name in zip(REMOVE_TS, ["R_early", "R_mid", "R_late"]):
         jr = _get(t)

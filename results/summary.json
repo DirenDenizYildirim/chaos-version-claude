@@ -1,0 +1,1986 @@
+{
+ "generated": "2026-11-12T02:19:50",
+ "inputs": {
+  "eval": "/home/user/chaos-version-claude/results/eval.csv",
+  "runs": "/home/user/chaos-version-claude/results/raw/runs"
+ },
+ "coverage": {
+  "n_rows": 30024,
+  "rows_by_mode": {
+   "adv": 26640,
+   "nature": 2664,
+   "br": 720
+  },
+  "seeds_by_arm": {
+   "blackboard": [
+    0,
+    1
+   ],
+   "default": [
+    0,
+    1
+   ],
+   "heuristic": [
+    -1
+   ],
+   "protected": [
+    0,
+    1
+   ],
+   "silent": [
+    0,
+    1
+   ],
+   "solo": [
+    0,
+    1
+   ]
+  },
+  "cells_with_rows": 12,
+  "conditions_with_all_V": 36,
+  "training_runs_loaded": 120,
+  "training_run_problems": []
+ },
+ "primary_transfer_test": {
+  "score": "adversarial (pool minimum)",
+  "overall": {
+   "n_supported": 0,
+   "n_outcomes": 6,
+   "supported_outcomes": [],
+   "untestable_outcomes": [],
+   "supported_overall": false,
+   "label": "not supported"
+  },
+  "per_outcome": [
+   {
+    "outcome": "V_comm",
+    "lopo_mae_P": 0.05272181279496042,
+    "lopo_mae_B1": 0.05274638878556007,
+    "lopo_mae_B2": 0.0572194573181217,
+    "lopo_rho_P": 0.2924066924066924,
+    "lopo_supported": false,
+    "headline_mae_P": 0.06603010246521145,
+    "headline_mae_B1": 0.06834395902374273,
+    "headline_mae_B2": 0.06776990793867271,
+    "headline_rho_P": 0.4666666666666666,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_gossip",
+    "lopo_mae_P": 0.06117272431183814,
+    "lopo_mae_B1": 0.059858944465643514,
+    "lopo_mae_B2": 0.06052714262792171,
+    "lopo_rho_P": 0.18841698841698845,
+    "lopo_supported": false,
+    "headline_mae_P": 0.07779475678469137,
+    "headline_mae_B1": 0.07703702676393724,
+    "headline_mae_B2": 0.07312856201834957,
+    "headline_rho_P": 0.08333333333333334,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_couple",
+    "lopo_mae_P": 0.057868807372428596,
+    "lopo_mae_B1": 0.05696531579594313,
+    "lopo_mae_B2": 0.0571313848230436,
+    "lopo_rho_P": 0.23243243243243245,
+    "lopo_supported": false,
+    "headline_mae_P": 0.0508534660797946,
+    "headline_mae_B1": 0.035644585637503924,
+    "headline_mae_B2": 0.03595018540958831,
+    "headline_rho_P": 0.39999999999999997,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_sac",
+    "lopo_mae_P": 0.030639250475439812,
+    "lopo_mae_B1": 0.03647596140058994,
+    "lopo_mae_B2": 0.03653345301290668,
+    "lopo_rho_P": 0.146975546975547,
+    "lopo_supported": false,
+    "headline_mae_P": 0.03536292884513256,
+    "headline_mae_B1": 0.03671750419791173,
+    "headline_mae_B2": 0.03661251427587765,
+    "headline_rho_P": 0.6333333333333333,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "beta",
+    "lopo_mae_P": 0.214985291916787,
+    "lopo_mae_B1": 0.14128703066629256,
+    "lopo_mae_B2": 0.151830418576338,
+    "lopo_rho_P": 0.8416988416988418,
+    "lopo_supported": false,
+    "headline_mae_P": 0.3185946949780693,
+    "headline_mae_B1": 0.14153892904520143,
+    "headline_mae_B2": 0.1434915844201912,
+    "headline_rho_P": 0.8333333333333333,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "loss_default",
+    "lopo_mae_P": 0.17780639096509562,
+    "lopo_mae_B1": 0.2388740195888889,
+    "lopo_mae_B2": 0.23722473222696017,
+    "lopo_rho_P": 0.26190690199087363,
+    "lopo_supported": false,
+    "headline_mae_P": 0.15931661280283171,
+    "headline_mae_B1": 0.22649217123703705,
+    "headline_mae_B2": 0.22649217123703697,
+    "headline_rho_P": 0.35,
+    "headline_supported": false,
+    "supported": false
+   }
+  ],
+  "metrics": [
+   {
+    "outcome": "V_comm",
+    "split": "headline",
+    "model": "P",
+    "mae": 0.06603010246521145,
+    "spearman": 0.4666666666666666,
+    "sign_agree": 0.7777777777777778,
+    "n": 9
+   },
+   {
+    "outcome": "V_comm",
+    "split": "headline",
+    "model": "B0",
+    "mae": 0.07486764836842032,
+    "spearman": null,
+    "sign_agree": 0.7777777777777778,
+    "n": 9
+   },
+   {
+    "outcome": "V_comm",
+    "split": "headline",
+    "model": "B1",
+    "mae": 0.06834395902374273,
+    "spearman": 0.4743416490252569,
+    "sign_agree": 0.6666666666666666,
+    "n": 9
+   },
+   {
+    "outcome": "V_comm",
+    "split": "headline",
+    "model": "B2",
+    "mae": 0.06776990793867271,
+    "spearman": 0.6833333333333333,
+    "sign_agree": 0.5555555555555556,
+    "n": 9
+   },
+   {
+    "outcome": "V_comm",
+    "split": "lopo",
+    "model": "P",
+    "mae": 0.05272181279496042,
+    "spearman": 0.2924066924066924,
+    "sign_agree": 0.7222222222222222,
+    "n": 36
+   },
+   {
+    "outcome": "V_comm",
+    "split": "lopo",
+    "model": "B0",
+    "mae": 0.05993413442724423,
+    "spearman": -0.2606902145447504,
+    "sign_agree": 0.7222222222222222,
+    "n": 36
+   },
+   {
+    "outcome": "V_comm",
+    "split": "lopo",
+    "model": "B1",
+    "mae": 0.05274638878556007,
+    "spearman": 0.23392831107511278,
+    "sign_agree": 0.6111111111111112,
+    "n": 36
+   },
+   {
+    "outcome": "V_comm",
+    "split": "lopo",
+    "model": "B2",
+    "mae": 0.0572194573181217,
+    "spearman": 0.3564993564993565,
+    "sign_agree": 0.6111111111111112,
+    "n": 36
+   },
+   {
+    "outcome": "V_gossip",
+    "split": "headline",
+    "model": "P",
+    "mae": 0.07779475678469137,
+    "spearman": 0.08333333333333334,
+    "sign_agree": 0.6666666666666666,
+    "n": 9
+   },
+   {
+    "outcome": "V_gossip",
+    "split": "headline",
+    "model": "B0",
+    "mae": 0.08271816511738433,
+    "spearman": null,
+    "sign_agree": 0.8888888888888888,
+    "n": 9
+   },
+   {
+    "outcome": "V_gossip",
+    "split": "headline",
+    "model": "B1",
+    "mae": 0.07703702676393724,
+    "spearman": 0.15811388300841894,
+    "sign_agree": 0.5555555555555556,
+    "n": 9
+   },
+   {
+    "outcome": "V_gossip",
+    "split": "headline",
+    "model": "B2",
+    "mae": 0.07312856201834957,
+    "spearman": 0.41666666666666663,
+    "sign_agree": 0.7777777777777778,
+    "n": 9
+   },
+   {
+    "outcome": "V_gossip",
+    "split": "lopo",
+    "model": "P",
+    "mae": 0.06117272431183814,
+    "spearman": 0.18841698841698845,
+    "sign_agree": 0.75,
+    "n": 36
+   },
+   {
+    "outcome": "V_gossip",
+    "split": "lopo",
+    "model": "B0",
+    "mae": 0.06730041614614006,
+    "spearman": -0.2248154143780416,
+    "sign_agree": 0.8333333333333334,
+    "n": 36
+   },
+   {
+    "outcome": "V_gossip",
+    "split": "lopo",
+    "model": "B1",
+    "mae": 0.059858944465643514,
+    "spearman": 0.20681741409620896,
+    "sign_agree": 0.75,
+    "n": 36
+   },
+   {
+    "outcome": "V_gossip",
+    "split": "lopo",
+    "model": "B2",
+    "mae": 0.06052714262792171,
+    "spearman": 0.3783783783783784,
+    "sign_agree": 0.8055555555555556,
+    "n": 36
+   },
+   {
+    "outcome": "V_couple",
+    "split": "headline",
+    "model": "P",
+    "mae": 0.0508534660797946,
+    "spearman": 0.39999999999999997,
+    "sign_agree": 0.7777777777777778,
+    "n": 9
+   },
+   {
+    "outcome": "V_couple",
+    "split": "headline",
+    "model": "B0",
+    "mae": 0.06054701210963975,
+    "spearman": null,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "V_couple",
+    "split": "headline",
+    "model": "B1",
+    "mae": 0.035644585637503924,
+    "spearman": 0.7905694150420948,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "V_couple",
+    "split": "headline",
+    "model": "B2",
+    "mae": 0.03595018540958831,
+    "spearman": 0.75,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "V_couple",
+    "split": "lopo",
+    "model": "P",
+    "mae": 0.057868807372428596,
+    "spearman": 0.23243243243243245,
+    "sign_agree": 0.8611111111111112,
+    "n": 36
+   },
+   {
+    "outcome": "V_couple",
+    "split": "lopo",
+    "model": "B0",
+    "mae": 0.07090522300683649,
+    "spearman": -0.5692134959784457,
+    "sign_agree": 0.9166666666666666,
+    "n": 36
+   },
+   {
+    "outcome": "V_couple",
+    "split": "lopo",
+    "model": "B1",
+    "mae": 0.05696531579594313,
+    "spearman": 0.1742843377215244,
+    "sign_agree": 0.9166666666666666,
+    "n": 36
+   },
+   {
+    "outcome": "V_couple",
+    "split": "lopo",
+    "model": "B2",
+    "mae": 0.0571313848230436,
+    "spearman": 0.17014157014157016,
+    "sign_agree": 0.9166666666666666,
+    "n": 36
+   },
+   {
+    "outcome": "V_sac",
+    "split": "headline",
+    "model": "P",
+    "mae": 0.03536292884513256,
+    "spearman": 0.6333333333333333,
+    "sign_agree": 0.7777777777777778,
+    "n": 9
+   },
+   {
+    "outcome": "V_sac",
+    "split": "headline",
+    "model": "B0",
+    "mae": 0.037569856614750353,
+    "spearman": null,
+    "sign_agree": 0.8888888888888888,
+    "n": 9
+   },
+   {
+    "outcome": "V_sac",
+    "split": "headline",
+    "model": "B1",
+    "mae": 0.03671750419791173,
+    "spearman": 0.15811388300841894,
+    "sign_agree": 0.8888888888888888,
+    "n": 9
+   },
+   {
+    "outcome": "V_sac",
+    "split": "headline",
+    "model": "B2",
+    "mae": 0.03661251427587765,
+    "spearman": 0.08333333333333334,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "V_sac",
+    "split": "lopo",
+    "model": "P",
+    "mae": 0.030639250475439812,
+    "spearman": 0.146975546975547,
+    "sign_agree": 0.7222222222222222,
+    "n": 36
+   },
+   {
+    "outcome": "V_sac",
+    "split": "lopo",
+    "model": "B0",
+    "mae": 0.03696485130158338,
+    "spearman": -0.590738376078471,
+    "sign_agree": 0.7777777777777778,
+    "n": 36
+   },
+   {
+    "outcome": "V_sac",
+    "split": "lopo",
+    "model": "B1",
+    "mae": 0.03647596140058994,
+    "spearman": -0.05344719690126748,
+    "sign_agree": 0.7777777777777778,
+    "n": 36
+   },
+   {
+    "outcome": "V_sac",
+    "split": "lopo",
+    "model": "B2",
+    "mae": 0.03653345301290668,
+    "spearman": -0.0833976833976834,
+    "sign_agree": 0.8055555555555556,
+    "n": 36
+   },
+   {
+    "outcome": "beta",
+    "split": "headline",
+    "model": "P",
+    "mae": 0.3185946949780693,
+    "spearman": 0.8333333333333333,
+    "sign_agree": 0.6666666666666666,
+    "n": 9
+   },
+   {
+    "outcome": "beta",
+    "split": "headline",
+    "model": "B0",
+    "mae": 0.4533690158008381,
+    "spearman": null,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "beta",
+    "split": "headline",
+    "model": "B1",
+    "mae": 0.14153892904520143,
+    "spearman": 0.9486832980505138,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "beta",
+    "split": "headline",
+    "model": "B2",
+    "mae": 0.1434915844201912,
+    "spearman": 0.9500000000000001,
+    "sign_agree": 0.8888888888888888,
+    "n": 9
+   },
+   {
+    "outcome": "beta",
+    "split": "lopo",
+    "model": "P",
+    "mae": 0.214985291916787,
+    "spearman": 0.8416988416988418,
+    "sign_agree": 0.8055555555555556,
+    "n": 36
+   },
+   {
+    "outcome": "beta",
+    "split": "lopo",
+    "model": "B0",
+    "mae": 0.4209625131660921,
+    "spearman": -0.16980738745575483,
+    "sign_agree": 0.9444444444444444,
+    "n": 36
+   },
+   {
+    "outcome": "beta",
+    "split": "lopo",
+    "model": "B1",
+    "mae": 0.14128703066629256,
+    "spearman": 0.8125523123105738,
+    "sign_agree": 0.9444444444444444,
+    "n": 36
+   },
+   {
+    "outcome": "beta",
+    "split": "lopo",
+    "model": "B2",
+    "mae": 0.151830418576338,
+    "spearman": 0.8864864864864865,
+    "sign_agree": 0.8333333333333334,
+    "n": 36
+   },
+   {
+    "outcome": "loss_default",
+    "split": "headline",
+    "model": "P",
+    "mae": 0.15931661280283171,
+    "spearman": 0.35,
+    "sign_agree": 0.8888888888888888,
+    "n": 9
+   },
+   {
+    "outcome": "loss_default",
+    "split": "headline",
+    "model": "B0",
+    "mae": 0.23032563649300414,
+    "spearman": null,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "loss_default",
+    "split": "headline",
+    "model": "B1",
+    "mae": 0.22649217123703705,
+    "spearman": 0.5270462766947298,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "loss_default",
+    "split": "headline",
+    "model": "B2",
+    "mae": 0.22649217123703697,
+    "spearman": 0.8499999999999999,
+    "sign_agree": 1.0,
+    "n": 9
+   },
+   {
+    "outcome": "loss_default",
+    "split": "lopo",
+    "model": "P",
+    "mae": 0.17780639096509562,
+    "spearman": 0.26190690199087363,
+    "sign_agree": 0.6388888888888888,
+    "n": 36
+   },
+   {
+    "outcome": "loss_default",
+    "split": "lopo",
+    "model": "B0",
+    "mae": 0.24300610231790123,
+    "spearman": -0.8297769587813966,
+    "sign_agree": 0.6944444444444444,
+    "n": 36
+   },
+   {
+    "outcome": "loss_default",
+    "split": "lopo",
+    "model": "B1",
+    "mae": 0.2388740195888889,
+    "spearman": -0.2907465700180771,
+    "sign_agree": 0.6944444444444444,
+    "n": 36
+   },
+   {
+    "outcome": "loss_default",
+    "split": "lopo",
+    "model": "B2",
+    "mae": 0.23722473222696017,
+    "spearman": -0.14126783048560584,
+    "sign_agree": 0.6944444444444444,
+    "n": 36
+   }
+  ],
+  "headline_coefficients": [
+   {
+    "outcome": "V_comm",
+    "model": "P",
+    "param": "mission[search]",
+    "value": 0.05634495740655283
+   },
+   {
+    "outcome": "V_comm",
+    "model": "P",
+    "param": "mission[haul]",
+    "value": -0.011263928260237472
+   },
+   {
+    "outcome": "V_comm",
+    "model": "P",
+    "param": "mission[escort]",
+    "value": 0.05272866931648381
+   },
+   {
+    "outcome": "V_comm",
+    "model": "P",
+    "param": "log_S",
+    "value": 0.011174663466803318
+   },
+   {
+    "outcome": "V_comm",
+    "model": "P",
+    "param": "R_late",
+    "value": 0.008923233260441909
+   },
+   {
+    "outcome": "V_comm",
+    "model": "B0",
+    "param": "intercept",
+    "value": 0.03265119637232651
+   },
+   {
+    "outcome": "V_comm",
+    "model": "B1",
+    "param": "mission[search]",
+    "value": 0.04737718866710107
+   },
+   {
+    "outcome": "V_comm",
+    "model": "B1",
+    "param": "mission[haul]",
+    "value": -0.0052553052123715666
+   },
+   {
+    "outcome": "V_comm",
+    "model": "B1",
+    "param": "mission[escort]",
+    "value": 0.05583170566225002
+   },
+   {
+    "outcome": "V_comm",
+    "model": "B2",
+    "param": "mission[search]",
+    "value": 0.0732094874952503
+   },
+   {
+    "outcome": "V_comm",
+    "model": "B2",
+    "param": "mission[haul]",
+    "value": 0.020576993615777667
+   },
+   {
+    "outcome": "V_comm",
+    "model": "B2",
+    "param": "mission[escort]",
+    "value": 0.08166400449039925
+   },
+   {
+    "outcome": "V_comm",
+    "model": "B2",
+    "param": "tempo",
+    "value": -0.07749689648444759
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "P",
+    "param": "mission[search]",
+    "value": 0.07958655501797383
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "P",
+    "param": "mission[haul]",
+    "value": -0.011645396853874274
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "P",
+    "param": "mission[escort]",
+    "value": 0.07108621839638626
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "P",
+    "param": "log_S",
+    "value": 0.0030599197322095017
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "P",
+    "param": "R_late",
+    "value": 0.03084059453616982
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "B0",
+    "param": "intercept",
+    "value": 0.04984284848335047
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "B1",
+    "param": "mission[search]",
+    "value": 0.0780968368697255
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "B1",
+    "param": "mission[haul]",
+    "value": -7.54386567220396e-05
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "B1",
+    "param": "mission[escort]",
+    "value": 0.07150714723704796
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "B2",
+    "param": "mission[search]",
+    "value": 0.11262901391004143
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "B2",
+    "param": "mission[haul]",
+    "value": 0.034456738383593866
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "B2",
+    "param": "mission[escort]",
+    "value": 0.10603932427736386
+   },
+   {
+    "outcome": "V_gossip",
+    "model": "B2",
+    "param": "tempo",
+    "value": -0.10359653112094754
+   },
+   {
+    "outcome": "V_couple",
+    "model": "P",
+    "param": "mission[search]",
+    "value": -0.030810755676895556
+   },
+   {
+    "outcome": "V_couple",
+    "model": "P",
+    "param": "mission[haul]",
+    "value": 0.051184822965733644
+   },
+   {
+    "outcome": "V_couple",
+    "model": "P",
+    "param": "mission[escort]",
+    "value": 0.08566837732651365
+   },
+   {
+    "outcome": "V_couple",
+    "model": "P",
+    "param": "log_S",
+    "value": -0.04690469769091819
+   },
+   {
+    "outcome": "V_couple",
+    "model": "P",
+    "param": "R_late",
+    "value": 0.16216430595747802
+   },
+   {
+    "outcome": "V_couple",
+    "model": "B0",
+    "param": "intercept",
+    "value": 0.05965993069194785
+   },
+   {
+    "outcome": "V_couple",
+    "model": "B1",
+    "param": "mission[search]",
+    "value": 0.013620479090918083
+   },
+   {
+    "outcome": "V_couple",
+    "model": "B1",
+    "param": "mission[haul]",
+    "value": 0.09572968260234074
+   },
+   {
+    "outcome": "V_couple",
+    "model": "B1",
+    "param": "mission[escort]",
+    "value": 0.06962963038258474
+   },
+   {
+    "outcome": "V_couple",
+    "model": "B2",
+    "param": "mission[search]",
+    "value": 0.011901480372943297
+   },
+   {
+    "outcome": "V_couple",
+    "model": "B2",
+    "param": "mission[haul]",
+    "value": 0.09401068388436597
+   },
+   {
+    "outcome": "V_couple",
+    "model": "B2",
+    "param": "mission[escort]",
+    "value": 0.06791063166460994
+   },
+   {
+    "outcome": "V_couple",
+    "model": "B2",
+    "param": "tempo",
+    "value": 0.005156996153924509
+   },
+   {
+    "outcome": "V_sac",
+    "model": "P",
+    "param": "mission[search]",
+    "value": 0.05383462901126088
+   },
+   {
+    "outcome": "V_sac",
+    "model": "P",
+    "param": "mission[haul]",
+    "value": 0.05731308652358189
+   },
+   {
+    "outcome": "V_sac",
+    "model": "P",
+    "param": "mission[escort]",
+    "value": -0.012529930853266716
+   },
+   {
+    "outcome": "V_sac",
+    "model": "P",
+    "param": "log_S",
+    "value": 0.039805033739827196
+   },
+   {
+    "outcome": "V_sac",
+    "model": "P",
+    "param": "R_late",
+    "value": -0.0812354294698747
+   },
+   {
+    "outcome": "V_sac",
+    "model": "B0",
+    "param": "intercept",
+    "value": 0.019164174861081466
+   },
+   {
+    "outcome": "V_sac",
+    "model": "B1",
+    "param": "mission[search]",
+    "value": 0.018046468154682686
+   },
+   {
+    "outcome": "V_sac",
+    "model": "B1",
+    "param": "mission[haul]",
+    "value": 0.03921624333532906
+   },
+   {
+    "outcome": "V_sac",
+    "model": "B1",
+    "param": "mission[escort]",
+    "value": 0.00022981309323262034
+   },
+   {
+    "outcome": "V_sac",
+    "model": "B2",
+    "param": "mission[search]",
+    "value": 0.018721403367758814
+   },
+   {
+    "outcome": "V_sac",
+    "model": "B2",
+    "param": "mission[haul]",
+    "value": 0.03989117854840518
+   },
+   {
+    "outcome": "V_sac",
+    "model": "B2",
+    "param": "mission[escort]",
+    "value": 0.0009047483063087359
+   },
+   {
+    "outcome": "V_sac",
+    "model": "B2",
+    "param": "tempo",
+    "value": -0.0020248056392283276
+   },
+   {
+    "outcome": "beta",
+    "model": "P",
+    "param": "mission[search]",
+    "value": 0.35613595464297965
+   },
+   {
+    "outcome": "beta",
+    "model": "P",
+    "param": "mission[haul]",
+    "value": 0.7204597056371963
+   },
+   {
+    "outcome": "beta",
+    "model": "P",
+    "param": "mission[escort]",
+    "value": 0.05261035117902584
+   },
+   {
+    "outcome": "beta",
+    "model": "P",
+    "param": "log_S",
+    "value": -0.021751243413337357
+   },
+   {
+    "outcome": "beta",
+    "model": "P",
+    "param": "R_late",
+    "value": 1.1495671192738186
+   },
+   {
+    "outcome": "beta",
+    "model": "B0",
+    "param": "intercept",
+    "value": 0.5196117831288264
+   },
+   {
+    "outcome": "beta",
+    "model": "B1",
+    "param": "mission[search]",
+    "value": 0.4132834239142154
+   },
+   {
+    "outcome": "beta",
+    "model": "B1",
+    "param": "mission[haul]",
+    "value": 1.1166009698693506
+   },
+   {
+    "outcome": "beta",
+    "model": "B1",
+    "param": "mission[escort]",
+    "value": 0.0289509556029129
+   },
+   {
+    "outcome": "beta",
+    "model": "B2",
+    "param": "mission[search]",
+    "value": 0.3008623961927417
+   },
+   {
+    "outcome": "beta",
+    "model": "B2",
+    "param": "mission[haul]",
+    "value": 1.0041799421478768
+   },
+   {
+    "outcome": "beta",
+    "model": "B2",
+    "param": "mission[escort]",
+    "value": -0.08347007211856128
+   },
+   {
+    "outcome": "beta",
+    "model": "B2",
+    "param": "tempo",
+    "value": 0.337263083164423
+   },
+   {
+    "outcome": "loss_default",
+    "model": "P",
+    "param": "mission[search]",
+    "value": 0.4409696670087811
+   },
+   {
+    "outcome": "loss_default",
+    "model": "P",
+    "param": "mission[haul]",
+    "value": 0.4506137503115099
+   },
+   {
+    "outcome": "loss_default",
+    "model": "P",
+    "param": "mission[escort]",
+    "value": -0.07033869211145159
+   },
+   {
+    "outcome": "loss_default",
+    "model": "P",
+    "param": "log_S",
+    "value": 0.39482264830604236
+   },
+   {
+    "outcome": "loss_default",
+    "model": "P",
+    "param": "R_late",
+    "value": -0.8413391053570376
+   },
+   {
+    "outcome": "loss_default",
+    "model": "B0",
+    "param": "intercept",
+    "value": 0.13340727898518517
+   },
+   {
+    "outcome": "loss_default",
+    "model": "B1",
+    "param": "mission[search]",
+    "value": 0.08478009199074073
+   },
+   {
+    "outcome": "loss_default",
+    "model": "B1",
+    "param": "mission[haul]",
+    "value": 0.2586805564648148
+   },
+   {
+    "outcome": "loss_default",
+    "model": "B1",
+    "param": "mission[escort]",
+    "value": 0.056761188500000004
+   },
+   {
+    "outcome": "loss_default",
+    "model": "B2",
+    "param": "mission[search]",
+    "value": 0.029590138542397754
+   },
+   {
+    "outcome": "loss_default",
+    "model": "B2",
+    "param": "mission[haul]",
+    "value": 0.20349060301647184
+   },
+   {
+    "outcome": "loss_default",
+    "model": "B2",
+    "param": "mission[escort]",
+    "value": 0.0015712350516570044
+   },
+   {
+    "outcome": "loss_default",
+    "model": "B2",
+    "param": "tempo",
+    "value": 0.16556986034502924
+   }
+  ]
+ },
+ "sensitivity_excluding_failed_heuristic_cells": {
+  "excluded_cells": [
+   "corrosion/search",
+   "corrosion/escort",
+   "jam/search",
+   "quake/search",
+   "combined/search",
+   "combined/escort"
+  ],
+  "overall": {
+   "n_supported": 0,
+   "n_outcomes": 6,
+   "supported_outcomes": [],
+   "untestable_outcomes": [],
+   "supported_overall": false,
+   "label": "not supported"
+  },
+  "per_outcome": [
+   {
+    "outcome": "V_comm",
+    "lopo_mae_P": 0.053924486286671514,
+    "lopo_mae_B1": 0.05745510593519292,
+    "lopo_mae_B2": 0.06691771961942972,
+    "lopo_rho_P": 0.3766769865841073,
+    "lopo_supported": false,
+    "headline_mae_P": 0.019665317708867935,
+    "headline_mae_B1": 0.029440839472200258,
+    "headline_mae_B2": 0.04136410524459313,
+    "headline_rho_P": 0.5,
+    "headline_supported": true,
+    "supported": false
+   },
+   {
+    "outcome": "V_gossip",
+    "lopo_mae_P": 0.06902935501043618,
+    "lopo_mae_B1": 0.06306591861719661,
+    "lopo_mae_B2": 0.0697171851862818,
+    "lopo_rho_P": 0.23219814241486067,
+    "lopo_supported": false,
+    "headline_mae_P": 0.055507894644927724,
+    "headline_mae_B1": 0.058708220088443924,
+    "headline_mae_B2": 0.07097405373448289,
+    "headline_rho_P": 0.5,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_couple",
+    "lopo_mae_P": 0.11182763036876703,
+    "lopo_mae_B1": 0.11028204288230697,
+    "lopo_mae_B2": 0.11028204288230697,
+    "lopo_rho_P": -0.5789473684210527,
+    "lopo_supported": false,
+    "headline_mae_P": 0.08983236359107706,
+    "headline_mae_B1": 0.052891461555762666,
+    "headline_mae_B2": 0.05289146155576271,
+    "headline_rho_P": 0.5,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_sac",
+    "lopo_mae_P": 0.02609472038156392,
+    "lopo_mae_B1": 0.03192492951991575,
+    "lopo_mae_B2": 0.032721114712431464,
+    "lopo_rho_P": 0.413828689370485,
+    "lopo_supported": false,
+    "headline_mae_P": 0.02949096111030597,
+    "headline_mae_B1": 0.020087972251488367,
+    "headline_mae_B2": 0.01989943121005628,
+    "headline_rho_P": 1.0,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "beta",
+    "lopo_mae_P": 0.3497512744603888,
+    "lopo_mae_B1": 0.2541332397043869,
+    "lopo_mae_B2": 0.227476174636607,
+    "lopo_rho_P": 0.5830753353973168,
+    "lopo_supported": false,
+    "headline_mae_P": 0.7613896061425481,
+    "headline_mae_B1": 0.3434191388751719,
+    "headline_mae_B2": 0.2515635340932198,
+    "headline_rho_P": -0.5,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "loss_default",
+    "lopo_mae_P": 0.2662485090268667,
+    "lopo_mae_B1": 0.3459141109925926,
+    "lopo_mae_B2": 0.3588633202063719,
+    "lopo_rho_P": 0.3605444323309193,
+    "lopo_supported": false,
+    "headline_mae_P": 0.3612731132534119,
+    "headline_mae_B1": 0.4149305524240741,
+    "headline_mae_B2": 0.41493055242407423,
+    "headline_rho_P": 0.5,
+    "headline_supported": true,
+    "supported": false
+   }
+  ]
+ },
+ "exploratory_transfer_nature_score": {
+  "overall": {
+   "n_supported": 0,
+   "n_outcomes": 6,
+   "supported_outcomes": [],
+   "untestable_outcomes": [],
+   "supported_overall": false,
+   "label": "not supported"
+  },
+  "per_outcome": [
+   {
+    "outcome": "V_comm",
+    "lopo_mae_P": 0.025704671967763534,
+    "lopo_mae_B1": 0.02498390942862888,
+    "lopo_mae_B2": 0.02498537243642862,
+    "lopo_rho_P": 0.6223938223938225,
+    "lopo_supported": false,
+    "headline_mae_P": 0.032764224728925005,
+    "headline_mae_B1": 0.031169176474931084,
+    "headline_mae_B2": 0.030719979000112006,
+    "headline_rho_P": 0.9833333333333333,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_gossip",
+    "lopo_mae_P": 0.02359895977024022,
+    "lopo_mae_B1": 0.023277810216046062,
+    "lopo_mae_B2": 0.022677939149096864,
+    "lopo_rho_P": 0.6972972972972973,
+    "lopo_supported": false,
+    "headline_mae_P": 0.021750870893168,
+    "headline_mae_B1": 0.02208925078761666,
+    "headline_mae_B2": 0.020341214874075777,
+    "headline_rho_P": 0.9333333333333332,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_couple",
+    "lopo_mae_P": 0.014616683412716689,
+    "lopo_mae_B1": 0.01500543459836265,
+    "lopo_mae_B2": 0.014769722720442876,
+    "lopo_rho_P": 0.48133848133848134,
+    "lopo_supported": false,
+    "headline_mae_P": 0.007474877886104651,
+    "headline_mae_B1": 0.00806028960832881,
+    "headline_mae_B2": 0.007599129987997458,
+    "headline_rho_P": 0.8833333333333333,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_sac",
+    "lopo_mae_P": 0.027657317107894444,
+    "lopo_mae_B1": 0.026380155220415303,
+    "lopo_mae_B2": 0.026914916409744593,
+    "lopo_rho_P": 0.1685971685971686,
+    "lopo_supported": false,
+    "headline_mae_P": 0.01868005742712311,
+    "headline_mae_B1": 0.017342928269505255,
+    "headline_mae_B2": 0.015385601721039616,
+    "headline_rho_P": 0.7,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "beta",
+    "lopo_mae_P": 0.01679272726807037,
+    "lopo_mae_B1": 0.017698894184510316,
+    "lopo_mae_B2": 0.017615593458845405,
+    "lopo_rho_P": 0.8777348777348778,
+    "lopo_supported": false,
+    "headline_mae_P": 0.023405616672363676,
+    "headline_mae_B1": 0.024273999180911533,
+    "headline_mae_B2": 0.024257743042022547,
+    "headline_rho_P": 0.9833333333333333,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "loss_default",
+    "lopo_mae_P": 0.057951574121101,
+    "lopo_mae_B1": 0.05686969508425927,
+    "lopo_mae_B2": 0.05710583339765,
+    "lopo_rho_P": -0.2388668212050162,
+    "lopo_supported": false,
+    "headline_mae_P": 0.02121393221470813,
+    "headline_mae_B1": 0.018545980024074076,
+    "headline_mae_B2": 0.018385228991563793,
+    "headline_rho_P": 0.9166666666666666,
+    "headline_supported": false,
+    "supported": false
+   }
+  ]
+ },
+ "secondary_expectations": {
+  "adv": [
+   {
+    "id": "1a",
+    "expectation": "V_comm >= 0 in most conditions",
+    "statistic": "share of conditions with V_comm >= 0",
+    "value": 0.72222,
+    "verdict": "pass"
+   },
+   {
+    "id": "1b",
+    "expectation": "V_comm declines at the highest tempo",
+    "statistic": "mean over cells of V_comm(tempo 0.6) - V_comm(tempo 0.3)",
+    "value": -0.0598,
+    "verdict": "mixed"
+   },
+   {
+    "id": "1c",
+    "expectation": "V_comm decreases as S grows (weak, non-monotone would not surprise)",
+    "statistic": "Spearman rho(V_comm, log S): pooled; per-cell share negative",
+    "value": -0.20875,
+    "verdict": "mixed"
+   },
+   {
+    "id": "1d",
+    "expectation": "V_comm smaller on jam than corrosion/quake at matched S",
+    "statistic": "mean residual of jam V_comm from (mission + log S) OLS fitted on corrosion+quake",
+    "value": -0.03046,
+    "verdict": "pass"
+   },
+   {
+    "id": "2a",
+    "expectation": "V_couple ordered escort > haul > search",
+    "statistic": "mission means of V_couple (pooled; per-planet share)",
+    "value": {
+     "escort": 0.07996,
+     "haul": 0.10895,
+     "search": 0.01479
+    },
+    "verdict": "fail"
+   },
+   {
+    "id": "2b",
+    "expectation": "V_couple largest on quake",
+    "statistic": "planet means of V_couple (pooled; per-mission share quake is max)",
+    "value": {
+     "combined": 0.09262,
+     "corrosion": 0.01316,
+     "jam": 0.11383,
+     "quake": 0.05199
+    },
+    "verdict": "fail"
+   },
+   {
+    "id": "2c",
+    "expectation": "V_couple decreases with S",
+    "statistic": "Spearman rho(V_couple, log S): pooled; per-cell share negative",
+    "value": 0.3825,
+    "verdict": "fail"
+   },
+   {
+    "id": "3a",
+    "expectation": "beta < 1 everywhere",
+    "statistic": "share of conditions with beta < 1",
+    "value": 0.83333,
+    "verdict": "mixed"
+   },
+   {
+    "id": "3b",
+    "expectation": "beta smallest for escort",
+    "statistic": "mission means of beta (pooled; per-planet share escort is min)",
+    "value": {
+     "escort": 0.03849,
+     "haul": 1.17843,
+     "search": 0.42404
+    },
+    "verdict": "pass"
+   },
+   {
+    "id": "3c[0.25]",
+    "expectation": "corrosion/combined raise N*(0.25) relative to jam",
+    "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
+    "value": 0.05556,
+    "verdict": "pass"
+   },
+   {
+    "id": "3c[0.5]",
+    "expectation": "corrosion/combined raise N*(0.5) relative to jam",
+    "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
+    "value": -0.44444,
+    "verdict": "fail"
+   },
+   {
+    "id": "3c[0.75]",
+    "expectation": "corrosion/combined raise N*(0.75) relative to jam",
+    "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
+    "value": -0.88889,
+    "verdict": "fail"
+   },
+   {
+    "id": "4a",
+    "expectation": "V_sac > 0 on corrosion/combined",
+    "statistic": "mean V_sac on corrosion+combined (share > 0)",
+    "value": 0.05052,
+    "verdict": "pass"
+   },
+   {
+    "id": "4b",
+    "expectation": "V_sac ~ 0 on jam (and smaller than on corrosion/combined)",
+    "statistic": "mean jam V_sac; pass if its 90% t-interval over conditions contains 0 and |mean| < corrosion/combined mean",
+    "value": 0.00805,
+    "verdict": "mixed"
+   },
+   {
+    "id": "4c",
+    "expectation": "default: exposure last third > first third on corrosion/combined",
+    "statistic": "mean over conditions of exp_last - exp_first (default arm, n in {4,6,8})",
+    "value": -0.09792,
+    "verdict": "fail"
+   },
+   {
+    "id": "4d",
+    "expectation": "exposure correlates negatively with W(t) across condition x removal time (corrosion/combined)",
+    "statistic": "Spearman rho(exposure in the third starting at t, W(t)), default arm n=6; pass if rho<0 and p<0.1, mixed if rho<0 and p>=0.1",
+    "value": 0.38296,
+    "verdict": "fail"
+   }
+  ],
+  "nature": [
+   {
+    "id": "1a",
+    "expectation": "V_comm >= 0 in most conditions",
+    "statistic": "share of conditions with V_comm >= 0",
+    "value": 0.69444,
+    "verdict": "pass"
+   },
+   {
+    "id": "1b",
+    "expectation": "V_comm declines at the highest tempo",
+    "statistic": "mean over cells of V_comm(tempo 0.6) - V_comm(tempo 0.3)",
+    "value": -0.00679,
+    "verdict": "pass"
+   },
+   {
+    "id": "1c",
+    "expectation": "V_comm decreases as S grows (weak, non-monotone would not surprise)",
+    "statistic": "Spearman rho(V_comm, log S): pooled; per-cell share negative",
+    "value": -0.12201,
+    "verdict": "mixed"
+   },
+   {
+    "id": "1d",
+    "expectation": "V_comm smaller on jam than corrosion/quake at matched S",
+    "statistic": "mean residual of jam V_comm from (mission + log S) OLS fitted on corrosion+quake",
+    "value": -0.01947,
+    "verdict": "pass"
+   },
+   {
+    "id": "2a",
+    "expectation": "V_couple ordered escort > haul > search",
+    "statistic": "mission means of V_couple (pooled; per-planet share)",
+    "value": {
+     "escort": 0.01904,
+     "haul": 0.03998,
+     "search": 0.00777
+    },
+    "verdict": "fail"
+   },
+   {
+    "id": "2b",
+    "expectation": "V_couple largest on quake",
+    "statistic": "planet means of V_couple (pooled; per-mission share quake is max)",
+    "value": {
+     "combined": 0.02528,
+     "corrosion": 0.0153,
+     "jam": 0.03991,
+     "quake": 0.00857
+    },
+    "verdict": "fail"
+   },
+   {
+    "id": "2c",
+    "expectation": "V_couple decreases with S",
+    "statistic": "Spearman rho(V_couple, log S): pooled; per-cell share negative",
+    "value": -0.0296,
+    "verdict": "pass"
+   },
+   {
+    "id": "3a",
+    "expectation": "beta < 1 everywhere",
+    "statistic": "share of conditions with beta < 1",
+    "value": 1.0,
+    "verdict": "pass"
+   },
+   {
+    "id": "3b",
+    "expectation": "beta smallest for escort",
+    "statistic": "mission means of beta (pooled; per-planet share escort is min)",
+    "value": {
+     "escort": 0.00763,
+     "haul": 0.91328,
+     "search": 0.40986
+    },
+    "verdict": "pass"
+   },
+   {
+    "id": "3c[0.25]",
+    "expectation": "corrosion/combined raise N*(0.25) relative to jam",
+    "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
+    "value": 0.33333,
+    "verdict": "pass"
+   },
+   {
+    "id": "3c[0.5]",
+    "expectation": "corrosion/combined raise N*(0.5) relative to jam",
+    "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
+    "value": 0.0,
+    "verdict": "fail"
+   },
+   {
+    "id": "3c[0.75]",
+    "expectation": "corrosion/combined raise N*(0.75) relative to jam",
+    "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
+    "value": 0.88889,
+    "verdict": "pass"
+   },
+   {
+    "id": "4a",
+    "expectation": "V_sac > 0 on corrosion/combined",
+    "statistic": "mean V_sac on corrosion+combined (share > 0)",
+    "value": 0.03736,
+    "verdict": "pass"
+   },
+   {
+    "id": "4b",
+    "expectation": "V_sac ~ 0 on jam (and smaller than on corrosion/combined)",
+    "statistic": "mean jam V_sac; pass if its 90% t-interval over conditions contains 0 and |mean| < corrosion/combined mean",
+    "value": 0.00638,
+    "verdict": "mixed"
+   },
+   {
+    "id": "4c",
+    "expectation": "default: exposure last third > first third on corrosion/combined",
+    "statistic": "mean over conditions of exp_last - exp_first (default arm, n in {4,6,8})",
+    "value": -0.04558,
+    "verdict": "fail"
+   },
+   {
+    "id": "4d",
+    "expectation": "exposure correlates negatively with W(t) across condition x removal time (corrosion/combined)",
+    "statistic": "Spearman rho(exposure in the third starting at t, W(t)), default arm n=6; pass if rho<0 and p<0.1, mixed if rho<0 and p>=0.1",
+    "value": 0.58628,
+    "verdict": "fail"
+   }
+  ]
+ },
+ "validity": {
+  "heuristic_cells_pass": 6,
+  "heuristic_cells_evaluated": 12,
+  "heuristic_gate_pass": false,
+  "heuristic_failing_cells": [
+   "corrosion/search",
+   "corrosion/escort",
+   "jam/search",
+   "quake/search",
+   "combined/search",
+   "combined/escort"
+  ],
+  "adv_reduces_cells": 11,
+  "adv_cells_evaluated": 12,
+  "adv_gate_pass": true,
+  "br_cells_covered": 12,
+  "br_mean_gap": 0.0006304501694444442,
+  "br_mean_rel_gap": 0.0012338157498907613,
+  "br_share_rows_pool_overestimates": 0.4361111111111111
+ },
+ "seed_spread": {
+  "adv": [
+   {
+    "outcome": "V_comm",
+    "seed_spread": 0.05039114891207571,
+    "between_spread": 0.07928141902884371,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "V_gossip",
+    "seed_spread": 0.050614579900185176,
+    "between_spread": 0.08884423037556533,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "V_couple",
+    "seed_spread": 0.025769390712761863,
+    "between_spread": 0.07408141226636943,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "V_sac",
+    "seed_spread": 0.02057729647999905,
+    "between_spread": 0.03773798321317732,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "beta",
+    "seed_spread": 0.04233128868647227,
+    "between_spread": 0.5268902955045731,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "Nstar_0.25",
+    "seed_spread": 0.7546154281781181,
+    "between_spread": 4.127626628863322,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "Nstar_0.5",
+    "seed_spread": 0.754615428178118,
+    "between_spread": 4.338824359823387,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "Nstar_0.75",
+    "seed_spread": 0.5527707983925667,
+    "between_spread": 4.211850251336404,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "loss_default",
+    "seed_spread": 0.030596411709033065,
+    "between_spread": 0.2816563400251066,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "loss_protected",
+    "seed_spread": 0.011792799342239943,
+    "between_spread": 0.26625537736860155,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "coupled_frac_default",
+    "seed_spread": 0.009589602360243803,
+    "between_spread": 0.20186268458784032,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   }
+  ],
+  "nature": [
+   {
+    "outcome": "V_comm",
+    "seed_spread": 0.04624006506540613,
+    "between_spread": 0.03944750597042689,
+    "unresolved": true,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "V_gossip",
+    "seed_spread": 0.03925006788264967,
+    "between_spread": 0.04735921443274223,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "V_couple",
+    "seed_spread": 0.01883271544986828,
+    "between_spread": 0.020387722252135247,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "V_sac",
+    "seed_spread": 0.014594720625983016,
+    "between_spread": 0.03757798527930276,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "beta",
+    "seed_spread": 0.012373624030420331,
+    "between_spread": 0.3761785048778122,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "Nstar_0.25",
+    "seed_spread": 0.726483157256779,
+    "between_spread": 4.286190449738388,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "Nstar_0.5",
+    "seed_spread": 0.2886751345948129,
+    "between_spread": 4.560701700396551,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "Nstar_0.75",
+    "seed_spread": 1.1843892002959913,
+    "between_spread": 3.7678674866329094,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "loss_default",
+    "seed_spread": 0.00413903751167985,
+    "between_spread": 0.07298284884753357,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "loss_protected",
+    "seed_spread": 0.007168578882923288,
+    "between_spread": 0.04304075360486825,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   },
+   {
+    "outcome": "coupled_frac_default",
+    "seed_spread": 0.004742141810724288,
+    "between_spread": 0.11259524790491778,
+    "unresolved": false,
+    "n_conditions": 36,
+    "n_seeds": 2
+   }
+  ]
+ },
+ "answers_per_cell_adv": [
+  {
+   "planet": "corrosion",
+   "mission": "search",
+   "J_silent": 0.4815529027777778,
+   "J_gossip": 0.5441979533333334,
+   "J_blackboard": 0.51559407,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.028603883333333413,
+   "V_comm": 0.06335230498909167,
+   "V_gossip": 0.1151140538362242,
+   "V_couple": 0.0014968407615118106,
+   "V_sac": 0.0637458685460261,
+   "loss_default": 0.2541775155555555,
+   "loss_protected": 0.16406250055555557,
+   "coupled_frac_default": 0.0,
+   "beta": 0.38239949589215616,
+   "Nstar_0.25": 4.0,
+   "Nstar_0.5": 3.0,
+   "Nstar_0.75": 2.0
+  },
+  {
+   "planet": "corrosion",
+   "mission": "haul",
+   "J_silent": 0.2804904561111111,
+   "J_gossip": 0.2838541727777778,
+   "J_blackboard": 0.28381800366666665,
+   "best_comm": "gossip",
+   "best_comm_margin": 3.616911111115062e-05,
+   "V_comm": 0.01276610940070926,
+   "V_gossip": 0.006143837517369535,
+   "V_couple": -0.0112763615708633,
+   "V_sac": 0.09297339921762415,
+   "loss_default": 0.7688802111111112,
+   "loss_protected": 0.6677336516666666,
+   "coupled_frac_default": 1.1723165666666667e-05,
+   "beta": 0.7973030584742355,
+   "Nstar_0.25": 12.0,
+   "Nstar_0.5": 8.0,
+   "Nstar_0.75": 4.0
+  },
+  {
+   "planet": "corrosion",
+   "mission": "escort",
+   "J_silent": 0.52211233,
+   "J_gossip": 0.5437731377777778,
+   "J_blackboard": 0.5464298422222222,
+   "best_comm": "blackboard",
+   "best_comm_margin": 0.0026567044444444354,
+   "V_comm": 0.015507362112448223,
+   "V_gossip": 0.006614407614486978,
+   "V_couple": 0.049252838784695156,
+   "V_sac": -0.005275279916709084,
+   "loss_default": 0.08942780700000001,
+   "loss_protected": 0.054380064055555545,
+   "coupled_frac_default": 0.03189583227777778,
+   "beta": 0.05235112177586556,
+   "Nstar_0.25": 2.0,
+   "Nstar_0.5": 2.0,
+   "Nstar_0.75": 2.0
+  },
+  {
+   "planet": "jam",
+   "mission": "search",
+   "J_silent": 0.4250403211111111,
+   "J_gossip": 0.4468243538888889,
+   "J_blackboard": 0.43782516055555554,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.008999193333333377,
+   "V_comm": 0.029428650750064386,
+   "V_gossip": 0.048020490945715484,
+   "V_couple": 0.02728916922546722,
+   "V_sac": 0.000978385960115816,
+   "loss_default": 0.0,
+   "loss_protected": 0.0,
+   "coupled_frac_default": 0.12086974305555555,
+   "beta": 0.41097709736085436,
+   "Nstar_0.25": 4.0,
+   "Nstar_0.5": 3.0,
+   "Nstar_0.75": 2.0
+  },
+  {
+   "planet": "jam",
+   "mission": "haul",
+   "J_silent": 0.3931930033333333,
+   "J_gossip": 0.39753328111111114,
+   "J_blackboard": 0.38838253666666667,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.004340277777777846,
+   "V_comm": -0.008832841000286801,
+   "V_gossip": 0.00988880291174245,
+   "V_couple": 0.1491042761994618,
+   "V_sac": 0.015386600320491625,
+   "loss_default": 0.0,
+   "loss_protected": 0.0,
+   "coupled_frac_default": 0.27141867000000003,
+   "beta": 1.2603612446289545,
+   "Nstar_0.25": 12.0,
+   "Nstar_0.5": 12.0,
+   "Nstar_0.75": 12.0
+  },
+  {
+   "planet": "jam",
+   "mission": "escort",
+   "J_silent": 0.5580947127777778,
+   "J_gossip": 0.5854968327777779,
+   "J_blackboard": 0.569914946111111,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.015581886666666822,
+   "V_comm": 0.029887574367704364,
+   "V_gossip": 0.052602286320487544,
+   "V_couple": 0.16508848413022684,
+   "V_sac": 0.007779192009965738,
+   "loss_default": 0.0,
+   "loss_protected": 0.0,
+   "coupled_frac_default": 0.5492858983333333,
+   "beta": 0.05547600741859889,
+   "Nstar_0.25": 2.0,
+   "Nstar_0.5": 2.0,
+   "Nstar_0.75": 2.0
+  },
+  {
+   "planet": "quake",
+   "mission": "search",
+   "J_silent": 0.42456957944444446,
+   "J_gossip": 0.4582065622222222,
+   "J_blackboard": 0.4477461277777778,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.010460434444444444,
+   "V_comm": 0.0493506102621472,
+   "V_gossip": 0.07115596582723689,
+   "V_couple": 0.012075427285775223,
+   "V_sac": -0.010584850042093861,
+   "loss_default": 0.00016276041666666666,
+   "loss_protected": 7.233796666666667e-05,
+   "coupled_frac_default": 0.022981771499999998,
+   "beta": 0.446473678489636,
+   "Nstar_0.25": 6.0,
+   "Nstar_0.5": 3.0,
+   "Nstar_0.75": 2.0
+  },
+  {
+   "planet": "quake",
+   "mission": "haul",
+   "J_silent": 0.2978877355555556,
+   "J_gossip": 0.29380064361111113,
+   "J_blackboard": 0.2933304377777778,
+   "best_comm": "silent",
+   "best_comm_margin": 0.004087091944444454,
+   "V_comm": -0.019699184037537162,
+   "V_gossip": -0.01625895639927811,
+   "V_couple": 0.14936113317842376,
+   "V_sac": 0.00928873046787142,
+   "loss_default": 0.007161458283333334,
+   "loss_protected": 0.008463541733333331,
+   "coupled_frac_default": 0.07264100038888889,
+   "beta": 1.2921386065048626,
+   "Nstar_0.25": 12.0,
+   "Nstar_0.5": 12.0,
+   "Nstar_0.75": 12.0
+  },
+  {
+   "planet": "quake",
+   "mission": "escort",
+   "J_silent": 0.4176583588888889,
+   "J_gossip": 0.51069761,
+   "J_blackboard": 0.49732736499999997,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.013370245000000058,
+   "V_comm": 0.12210018050659742,
+   "V_gossip": 0.1553047477761693,
+   "V_couple": -0.005452431767167846,
+   "V_sac": -0.0018144728135587873,
+   "loss_default": 0.0808557585,
+   "loss_protected": 0.015100549688888888,
+   "coupled_frac_default": 0.2594277866666667,
+   "beta": -0.0209742623857257,
+   "Nstar_0.25": 2.0,
+   "Nstar_0.5": 2.0,
+   "Nstar_0.75": 2.0
+  },
+  {
+   "planet": "combined",
+   "mission": "search",
+   "J_silent": 0.4006278861111111,
+   "J_gossip": 0.4441398905555555,
+   "J_blackboard": 0.44204390666666665,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.002095983888888875,
+   "V_comm": 0.09286063853395421,
+   "V_gossip": 0.09625841818991158,
+   "V_couple": 0.018280030667089,
+   "V_sac": 0.061148559537838855,
+   "loss_default": 0.1880063661111111,
+   "loss_protected": 0.12758608283333336,
+   "coupled_frac_default": 0.10244686766666666,
+   "beta": 0.45632640193866214,
+   "Nstar_0.25": 6.0,
+   "Nstar_0.5": 3.0,
+   "Nstar_0.75": 2.0
+  },
+  {
+   "planet": "combined",
+   "mission": "haul",
+   "J_silent": 0.2034866923888889,
+   "J_gossip": 0.20905671050000002,
+   "J_blackboard": 0.20337818466666668,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.00557001811111113,
+   "V_comm": 0.018437832045402926,
+   "V_gossip": 0.058632781431721875,
+   "V_couple": 0.14862114415810343,
+   "V_sac": 0.04923836499210079,
+   "loss_default": 0.6736111088888889,
+   "loss_protected": 0.640787755,
+   "coupled_frac_default": 0.29505748055555553,
+   "beta": 1.3639272920512486,
+   "Nstar_0.25": 12.0,
+   "Nstar_0.5": 12.0,
+   "Nstar_0.75": 12.0
+  },
+  {
+   "planet": "combined",
+   "mission": "escort",
+   "J_silent": 0.27333879416666673,
+   "J_gossip": 0.33374333466666667,
+   "J_blackboard": 0.3253546386666667,
+   "best_comm": "gossip",
+   "best_comm_margin": 0.008388695999999973,
+   "V_comm": 0.13283137513966942,
+   "V_gossip": 0.1627772738003052,
+   "V_couple": 0.1109598535298527,
+   "V_sac": 0.041300686887541925,
+   "loss_default": 0.21808087566666667,
+   "loss_protected": 0.051685474611111115,
+   "coupled_frac_default": 0.5840012616666667,
+   "beta": 0.06710562583889852,
+   "Nstar_0.25": 2.0,
+   "Nstar_0.5": 2.0,
+   "Nstar_0.75": 2.0
+  }
+ ],
+ "outcome_means_adv": {
+  "V_comm": 0.04483255108916376,
+  "V_gossip": 0.06385450914767442,
+  "V_couple": 0.06790003371521465,
+  "V_sac": 0.027013765430601223,
+  "beta": 0.5469887806656872,
+  "Nstar_0.25": 6.361111111111111,
+  "Nstar_0.5": 5.444444444444445,
+  "Nstar_0.75": 4.555555555555555,
+  "loss_default": 0.19003032179444446,
+  "loss_protected": 0.14415599650925925,
+  "coupled_frac_default": 0.19250316960639816
+ },
+ "ambiguity_resolutions": {
+  "n_average": "Outcomes average over n in {4,6,8} with nanmean: if some n are missing the mean is over the n present (column n_cov_<outcome> counts them). Seed-mean J first, then rel(), then mean over n.",
+  "beta": "beta = OLS slope of log(seed-mean J of default) on log N over all evaluated N in {2,3,4,6,8,12} with J>0; needs >=3 points, else NaN.",
+  "nstar": "N*(lambda) = argmax over evaluated N in {2,...,12} of Jbar(N) - lambda*N*Jbar(2)/2 (default arm, seed-mean J); NaN if N=2 is missing. Ties -> smallest N.",
+  "loss_rate": "loss rate = seed-mean deaths_per_robot, mean over n in {4,6,8}, of the arm's rows in the chosen score (for 'adv' the row of the minimising adversary).",
+  "adv_row_columns": "For the adversarial score every non-J column (deaths, exposure, speed, tau_stale, ...) comes from the row of the adversary that minimises J for that policy/tempo/n/remove_t.",
+  "principles": "S = tau_act / tau_stale with tau_act = 0.5 / mean(speed) and tau_stale = mean(tau_stale), both means over default-arm rows (seeds x n in {4,6,8}, remove_t=-1) of the chosen score. Means are taken before the ratio.",
+  "worth": "W(t) = (Jfull - Jremoved) * 6 / Jfull with Jfull, Jremoved the seed-mean J of default at n=6 (remove_t=-1 / t). Under the adversarial score both are pool-minimum scores. NaN if Jfull <= 1e-9.",
+  "per_seed": "Per-seed outcomes pair training seed s of every arm with seed s of the other arms; seed spread = std (ddof=1) over seeds per condition. An outcome is 'unresolved' when the pooled seed spread sqrt(mean_c sd_c^2) exceeds the between-condition spread (std over conditions of the seed-mean outcome).",
+  "transfer_rows": "All four models are fitted and scored on the same rows: conditions with finite y, log S, R_late and tempo.",
+  "transfer_verdict": "'P beats B1 and B2 in held-out MAE by >=10%' means MAE_P <= 0.9*MAE_B1 and MAE_P <= 0.9*MAE_B2. The prereg sentence ends 'on the leave-one-planet-out predictions'; we read that as qualifying both the MAE and the Spearman criterion, so the verdict uses the 36 LOPO predictions. The same criterion on the headline (train single-hazard -> predict combined) split is reported alongside but does not gate.",
+  "transfer_overall": ">=4 of 6 outcomes supported -> 'supported'; 1-3 -> 'partially supported'; 0 -> 'not supported'. Untestable outcomes (NaN metrics) count as not supported and are listed.",
+  "sign_agreement": "Fraction of held-out conditions with sign(pred) == sign(obs) (beta and loss rates are positive, so this metric is trivially ~1 for them).",
+  "bootstrap": "Only per-row mean J and J_sem are available, so uncertainty is propagated parametrically: every eval row's J is redrawn as Normal(J, J_sem) (J_sem NaN -> 0), the pool minimum is re-taken per draw, and the V outcomes are recomputed. This covers evaluation-episode noise only, not seed-to-seed training variation (see seed spread).",
+  "heuristic_match": "'match or beat the heuristic' = seed-mean J_default >= J_heuristic - 1.645*SE, SE combining the J_sem of both (one-sided 5% non-inferiority). Pass overall if >= 9 of 12 cells pass (cells without data count as fail).",
+  "adv_drop": "Per cell: mean over default rows (all seeds, tempi, n; remove_t=-1) of J_nature - J_adv. 'Most cells' = more than half of the 12 cells show a positive drop.",
+  "secondary_score": "Secondary expectations are evaluated under the same score as the primary test (adversarial) by default; the report also writes the nature-score version as a sensitivity table."
+ },
+ "figures": {
+  "a_J_vs_N": "figures/a_J_vs_N.png",
+  "b_heatmaps": "figures/b_heatmaps.png",
+  "c_collapse": "figures/c_collapse.png",
+  "d_pred_vs_obs_combined": "figures/d_pred_vs_obs_combined.png",
+  "e_worth_trajectory": "figures/e_worth_trajectory.png",
+  "f_exposure_thirds": "figures/f_exposure_thirds.png",
+  "g_training_curves": "figures/g_training_curves.png"
+ },
+ "figure_errors": {}
+}

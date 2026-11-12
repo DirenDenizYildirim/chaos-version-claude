@@ -1,0 +1,9 @@
+planet,mission,seed,arm_identical_to_default
+corrosion,search,0,solo
+corrosion,search,1,solo
+jam,escort,0,protected
+jam,escort,1,protected
+jam,haul,0,protected
+jam,haul,1,protected
+jam,search,0,protected
+jam,search,1,protected
