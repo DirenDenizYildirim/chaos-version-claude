@@ -86,5 +86,22 @@ python3 scripts/run_eval.py --n-ep 128 --n-ep-worth 512
 python3 scripts/make_report.py --eval results/eval.csv --runs results/raw/runs --out results/
 ```
 
-The grid took about 4.5 hours on 4 cores and the evaluation about 2 hours.
-Training is seeded, but results are not bit-reproducible across machines.
+```bash
+python3 scripts/exploratory.py
+```
+
+On 4 cores the grid took about 4.4 hours, the best responses 10 minutes and
+the evaluation about 3.5 hours. Training is seeded, but results are not
+bit-reproducible across machines.
+
+`scripts/patch_eval_default.py` is a one-off that repaired the first evaluation
+and is not needed for a fresh run. The exploratory budget check in the report
+was produced with:
+
+```bash
+python3 scripts/run_extended.py --iters 300 --cells corrosion:search,jam:search,quake:search,combined:search,quake:haul,quake:escort,combined:escort
+```
+
+```bash
+python3 scripts/run_eval.py --runs results/raw/extended --br results/raw/none --out results/raw/eval_extended --merged results/eval_extended.csv --cells corrosion:search,jam:search,quake:search,combined:search,quake:haul,quake:escort,combined:escort
+```

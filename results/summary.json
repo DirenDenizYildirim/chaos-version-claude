@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T02:19:50",
+ "generated": "2026-11-12T03:11:34",
  "inputs": {
   "eval": "/home/user/chaos-version-claude/results/eval.csv",
   "runs": "/home/user/chaos-version-claude/results/raw/runs"
@@ -54,84 +54,84 @@
   "per_outcome": [
    {
     "outcome": "V_comm",
-    "lopo_mae_P": 0.05272181279496042,
+    "lopo_mae_P": 0.0526411852183155,
     "lopo_mae_B1": 0.05274638878556007,
     "lopo_mae_B2": 0.0572194573181217,
-    "lopo_rho_P": 0.2924066924066924,
+    "lopo_rho_P": 0.32277992277992285,
     "lopo_supported": false,
-    "headline_mae_P": 0.06603010246521145,
+    "headline_mae_P": 0.06556002944686218,
     "headline_mae_B1": 0.06834395902374273,
     "headline_mae_B2": 0.06776990793867271,
-    "headline_rho_P": 0.4666666666666666,
+    "headline_rho_P": 0.41666666666666663,
     "headline_supported": false,
     "supported": false
    },
    {
     "outcome": "V_gossip",
-    "lopo_mae_P": 0.06117272431183814,
-    "lopo_mae_B1": 0.059858944465643514,
-    "lopo_mae_B2": 0.06052714262792171,
-    "lopo_rho_P": 0.18841698841698845,
+    "lopo_mae_P": 0.053958110820293496,
+    "lopo_mae_B1": 0.05474758901877669,
+    "lopo_mae_B2": 0.05641971784300724,
+    "lopo_rho_P": 0.37142857142857144,
     "lopo_supported": false,
-    "headline_mae_P": 0.07779475678469137,
-    "headline_mae_B1": 0.07703702676393724,
-    "headline_mae_B2": 0.07312856201834957,
-    "headline_rho_P": 0.08333333333333334,
+    "headline_mae_P": 0.06300474548022823,
+    "headline_mae_B1": 0.06467330952800797,
+    "headline_mae_B2": 0.061452445099330816,
+    "headline_rho_P": 0.5166666666666667,
     "headline_supported": false,
     "supported": false
    },
    {
     "outcome": "V_couple",
-    "lopo_mae_P": 0.057868807372428596,
-    "lopo_mae_B1": 0.05696531579594313,
-    "lopo_mae_B2": 0.0571313848230436,
-    "lopo_rho_P": 0.23243243243243245,
+    "lopo_mae_P": 0.04824441964203094,
+    "lopo_mae_B1": 0.05196536396473442,
+    "lopo_mae_B2": 0.05245368143690248,
+    "lopo_rho_P": 0.3164263750604019,
     "lopo_supported": false,
-    "headline_mae_P": 0.0508534660797946,
-    "headline_mae_B1": 0.035644585637503924,
-    "headline_mae_B2": 0.03595018540958831,
-    "headline_rho_P": 0.39999999999999997,
-    "headline_supported": false,
-    "supported": false
-   },
-   {
-    "outcome": "V_sac",
-    "lopo_mae_P": 0.030639250475439812,
-    "lopo_mae_B1": 0.03647596140058994,
-    "lopo_mae_B2": 0.03653345301290668,
-    "lopo_rho_P": 0.146975546975547,
-    "lopo_supported": false,
-    "headline_mae_P": 0.03536292884513256,
-    "headline_mae_B1": 0.03671750419791173,
-    "headline_mae_B2": 0.03661251427587765,
-    "headline_rho_P": 0.6333333333333333,
-    "headline_supported": false,
-    "supported": false
-   },
-   {
-    "outcome": "beta",
-    "lopo_mae_P": 0.214985291916787,
-    "lopo_mae_B1": 0.14128703066629256,
-    "lopo_mae_B2": 0.151830418576338,
-    "lopo_rho_P": 0.8416988416988418,
-    "lopo_supported": false,
-    "headline_mae_P": 0.3185946949780693,
-    "headline_mae_B1": 0.14153892904520143,
-    "headline_mae_B2": 0.1434915844201912,
+    "headline_mae_P": 0.02926942516799173,
+    "headline_mae_B1": 0.026385427925898337,
+    "headline_mae_B2": 0.02693375559288969,
     "headline_rho_P": 0.8333333333333333,
     "headline_supported": false,
     "supported": false
    },
    {
-    "outcome": "loss_default",
-    "lopo_mae_P": 0.17780639096509562,
-    "lopo_mae_B1": 0.2388740195888889,
-    "lopo_mae_B2": 0.23722473222696017,
-    "lopo_rho_P": 0.26190690199087363,
+    "outcome": "V_sac",
+    "lopo_mae_P": 0.039325094453133196,
+    "lopo_mae_B1": 0.037205819154449205,
+    "lopo_mae_B2": 0.03704983607784398,
+    "lopo_rho_P": -0.1914454858781966,
     "lopo_supported": false,
-    "headline_mae_P": 0.15931661280283171,
-    "headline_mae_B1": 0.22649217123703705,
-    "headline_mae_B2": 0.22649217123703697,
+    "headline_mae_P": 0.04662527530310693,
+    "headline_mae_B1": 0.03369156416873249,
+    "headline_mae_B2": 0.03377582037055866,
+    "headline_rho_P": 0.35,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "beta",
+    "lopo_mae_P": 0.18703399116519823,
+    "lopo_mae_B1": 0.12239041732875118,
+    "lopo_mae_B2": 0.13370555323119718,
+    "lopo_rho_P": 0.8404118404118405,
+    "lopo_supported": false,
+    "headline_mae_P": 0.2727552472386147,
+    "headline_mae_B1": 0.1215470344183884,
+    "headline_mae_B2": 0.12748251985014958,
+    "headline_rho_P": 0.8833333333333333,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "loss_default",
+    "lopo_mae_P": 0.17694576458550537,
+    "lopo_mae_B1": 0.23800027056316875,
+    "lopo_mae_B2": 0.23633704384552745,
+    "lopo_rho_P": 0.28645552034074717,
+    "lopo_supported": false,
+    "headline_mae_P": 0.15922279040483014,
+    "headline_mae_B1": 0.2231827097648148,
+    "headline_mae_B2": 0.22318270976481472,
     "headline_rho_P": 0.35,
     "headline_supported": false,
     "supported": false
@@ -142,9 +142,9 @@
     "outcome": "V_comm",
     "split": "headline",
     "model": "P",
-    "mae": 0.06603010246521145,
-    "spearman": 0.4666666666666666,
-    "sign_agree": 0.7777777777777778,
+    "mae": 0.06556002944686218,
+    "spearman": 0.41666666666666663,
+    "sign_agree": 0.8888888888888888,
     "n": 9
    },
    {
@@ -178,9 +178,9 @@
     "outcome": "V_comm",
     "split": "lopo",
     "model": "P",
-    "mae": 0.05272181279496042,
-    "spearman": 0.2924066924066924,
-    "sign_agree": 0.7222222222222222,
+    "mae": 0.0526411852183155,
+    "spearman": 0.32277992277992285,
+    "sign_agree": 0.8055555555555556,
     "n": 36
    },
    {
@@ -214,8 +214,8 @@
     "outcome": "V_gossip",
     "split": "headline",
     "model": "P",
-    "mae": 0.07779475678469137,
-    "spearman": 0.08333333333333334,
+    "mae": 0.06300474548022823,
+    "spearman": 0.5166666666666667,
     "sign_agree": 0.6666666666666666,
     "n": 9
    },
@@ -223,7 +223,7 @@
     "outcome": "V_gossip",
     "split": "headline",
     "model": "B0",
-    "mae": 0.08271816511738433,
+    "mae": 0.06906930768627968,
     "spearman": null,
     "sign_agree": 0.8888888888888888,
     "n": 9
@@ -232,8 +232,8 @@
     "outcome": "V_gossip",
     "split": "headline",
     "model": "B1",
-    "mae": 0.07703702676393724,
-    "spearman": 0.15811388300841894,
+    "mae": 0.06467330952800797,
+    "spearman": 0.4743416490252569,
     "sign_agree": 0.5555555555555556,
     "n": 9
    },
@@ -241,53 +241,53 @@
     "outcome": "V_gossip",
     "split": "headline",
     "model": "B2",
-    "mae": 0.07312856201834957,
-    "spearman": 0.41666666666666663,
-    "sign_agree": 0.7777777777777778,
+    "mae": 0.061452445099330816,
+    "spearman": 0.6833333333333333,
+    "sign_agree": 0.6666666666666666,
     "n": 9
    },
    {
     "outcome": "V_gossip",
     "split": "lopo",
     "model": "P",
-    "mae": 0.06117272431183814,
-    "spearman": 0.18841698841698845,
-    "sign_agree": 0.75,
+    "mae": 0.053958110820293496,
+    "spearman": 0.37142857142857144,
+    "sign_agree": 0.7222222222222222,
     "n": 36
    },
    {
     "outcome": "V_gossip",
     "split": "lopo",
     "model": "B0",
-    "mae": 0.06730041614614006,
-    "spearman": -0.2248154143780416,
-    "sign_agree": 0.8333333333333334,
+    "mae": 0.0620288579576684,
+    "spearman": -0.24634029447806682,
+    "sign_agree": 0.8055555555555556,
     "n": 36
    },
    {
     "outcome": "V_gossip",
     "split": "lopo",
     "model": "B1",
-    "mae": 0.059858944465643514,
-    "spearman": 0.20681741409620896,
-    "sign_agree": 0.75,
+    "mae": 0.05474758901877669,
+    "spearman": 0.26878517861941764,
+    "sign_agree": 0.7222222222222222,
     "n": 36
    },
    {
     "outcome": "V_gossip",
     "split": "lopo",
     "model": "B2",
-    "mae": 0.06052714262792171,
-    "spearman": 0.3783783783783784,
-    "sign_agree": 0.8055555555555556,
+    "mae": 0.05641971784300724,
+    "spearman": 0.47155727155727156,
+    "sign_agree": 0.7222222222222222,
     "n": 36
    },
    {
     "outcome": "V_couple",
     "split": "headline",
     "model": "P",
-    "mae": 0.0508534660797946,
-    "spearman": 0.39999999999999997,
+    "mae": 0.02926942516799173,
+    "spearman": 0.8333333333333333,
     "sign_agree": 0.7777777777777778,
     "n": 9
    },
@@ -295,7 +295,7 @@
     "outcome": "V_couple",
     "split": "headline",
     "model": "B0",
-    "mae": 0.06054701210963975,
+    "mae": 0.04498767429415439,
     "spearman": null,
     "sign_agree": 1.0,
     "n": 9
@@ -304,7 +304,7 @@
     "outcome": "V_couple",
     "split": "headline",
     "model": "B1",
-    "mae": 0.035644585637503924,
+    "mae": 0.026385427925898337,
     "spearman": 0.7905694150420948,
     "sign_agree": 1.0,
     "n": 9
@@ -313,8 +313,8 @@
     "outcome": "V_couple",
     "split": "headline",
     "model": "B2",
-    "mae": 0.03595018540958831,
-    "spearman": 0.75,
+    "mae": 0.02693375559288969,
+    "spearman": 0.6333333333333333,
     "sign_agree": 1.0,
     "n": 9
    },
@@ -322,116 +322,116 @@
     "outcome": "V_couple",
     "split": "lopo",
     "model": "P",
-    "mae": 0.057868807372428596,
-    "spearman": 0.23243243243243245,
+    "mae": 0.04824441964203094,
+    "spearman": 0.3164263750604019,
+    "sign_agree": 0.7777777777777778,
+    "n": 36
+   },
+   {
+    "outcome": "V_couple",
+    "split": "lopo",
+    "model": "B0",
+    "mae": 0.06297657535397762,
+    "spearman": -0.5980672986059602,
     "sign_agree": 0.8611111111111112,
     "n": 36
    },
    {
     "outcome": "V_couple",
     "split": "lopo",
-    "model": "B0",
-    "mae": 0.07090522300683649,
-    "spearman": -0.5692134959784457,
-    "sign_agree": 0.9166666666666666,
-    "n": 36
-   },
-   {
-    "outcome": "V_couple",
-    "split": "lopo",
     "model": "B1",
-    "mae": 0.05696531579594313,
-    "spearman": 0.1742843377215244,
-    "sign_agree": 0.9166666666666666,
+    "mae": 0.05196536396473442,
+    "spearman": 0.09607476786448263,
+    "sign_agree": 0.8611111111111112,
     "n": 36
    },
    {
     "outcome": "V_couple",
     "split": "lopo",
     "model": "B2",
-    "mae": 0.0571313848230436,
-    "spearman": 0.17014157014157016,
-    "sign_agree": 0.9166666666666666,
+    "mae": 0.05245368143690248,
+    "spearman": 0.1186920739648863,
+    "sign_agree": 0.8333333333333334,
     "n": 36
    },
    {
     "outcome": "V_sac",
     "split": "headline",
     "model": "P",
-    "mae": 0.03536292884513256,
-    "spearman": 0.6333333333333333,
-    "sign_agree": 0.7777777777777778,
+    "mae": 0.04662527530310693,
+    "spearman": 0.35,
+    "sign_agree": 0.6666666666666666,
     "n": 9
    },
    {
     "outcome": "V_sac",
     "split": "headline",
     "model": "B0",
-    "mae": 0.037569856614750353,
+    "mae": 0.034040254301315846,
     "spearman": null,
-    "sign_agree": 0.8888888888888888,
+    "sign_agree": 0.7777777777777778,
     "n": 9
    },
    {
     "outcome": "V_sac",
     "split": "headline",
     "model": "B1",
-    "mae": 0.03671750419791173,
+    "mae": 0.03369156416873249,
     "spearman": 0.15811388300841894,
-    "sign_agree": 0.8888888888888888,
+    "sign_agree": 0.6666666666666666,
     "n": 9
    },
    {
     "outcome": "V_sac",
     "split": "headline",
     "model": "B2",
-    "mae": 0.03661251427587765,
-    "spearman": 0.08333333333333334,
-    "sign_agree": 1.0,
+    "mae": 0.03377582037055866,
+    "spearman": 0.09999999999999999,
+    "sign_agree": 0.6666666666666666,
     "n": 9
    },
    {
     "outcome": "V_sac",
     "split": "lopo",
     "model": "P",
-    "mae": 0.030639250475439812,
-    "spearman": 0.146975546975547,
-    "sign_agree": 0.7222222222222222,
+    "mae": 0.039325094453133196,
+    "spearman": -0.1914454858781966,
+    "sign_agree": 0.4166666666666667,
     "n": 36
    },
    {
     "outcome": "V_sac",
     "split": "lopo",
     "model": "B0",
-    "mae": 0.03696485130158338,
-    "spearman": -0.590738376078471,
-    "sign_agree": 0.7777777777777778,
+    "mae": 0.03779193172253123,
+    "spearman": -0.6170466355730664,
+    "sign_agree": 0.5,
     "n": 36
    },
    {
     "outcome": "V_sac",
     "split": "lopo",
     "model": "B1",
-    "mae": 0.03647596140058994,
-    "spearman": -0.05344719690126748,
-    "sign_agree": 0.7777777777777778,
+    "mae": 0.037205819154449205,
+    "spearman": -0.11943924926812906,
+    "sign_agree": 0.4444444444444444,
     "n": 36
    },
    {
     "outcome": "V_sac",
     "split": "lopo",
     "model": "B2",
-    "mae": 0.03653345301290668,
-    "spearman": -0.0833976833976834,
-    "sign_agree": 0.8055555555555556,
+    "mae": 0.03704983607784398,
+    "spearman": -0.10791507063052817,
+    "sign_agree": 0.4722222222222222,
     "n": 36
    },
    {
     "outcome": "beta",
     "split": "headline",
     "model": "P",
-    "mae": 0.3185946949780693,
-    "spearman": 0.8333333333333333,
+    "mae": 0.2727552472386147,
+    "spearman": 0.8833333333333333,
     "sign_agree": 0.6666666666666666,
     "n": 9
    },
@@ -439,7 +439,7 @@
     "outcome": "beta",
     "split": "headline",
     "model": "B0",
-    "mae": 0.4533690158008381,
+    "mae": 0.4353688148601572,
     "spearman": null,
     "sign_agree": 1.0,
     "n": 9
@@ -448,7 +448,7 @@
     "outcome": "beta",
     "split": "headline",
     "model": "B1",
-    "mae": 0.14153892904520143,
+    "mae": 0.1215470344183884,
     "spearman": 0.9486832980505138,
     "sign_agree": 1.0,
     "n": 9
@@ -457,8 +457,8 @@
     "outcome": "beta",
     "split": "headline",
     "model": "B2",
-    "mae": 0.1434915844201912,
-    "spearman": 0.9500000000000001,
+    "mae": 0.12748251985014958,
+    "spearman": 0.9166666666666666,
     "sign_agree": 0.8888888888888888,
     "n": 9
    },
@@ -466,8 +466,8 @@
     "outcome": "beta",
     "split": "lopo",
     "model": "P",
-    "mae": 0.214985291916787,
-    "spearman": 0.8416988416988418,
+    "mae": 0.18703399116519823,
+    "spearman": 0.8404118404118405,
     "sign_agree": 0.8055555555555556,
     "n": 36
    },
@@ -475,8 +475,8 @@
     "outcome": "beta",
     "split": "lopo",
     "model": "B0",
-    "mae": 0.4209625131660921,
-    "spearman": -0.16980738745575483,
+    "mae": 0.4016685956195925,
+    "spearman": -0.15306581404462405,
     "sign_agree": 0.9444444444444444,
     "n": 36
    },
@@ -484,8 +484,8 @@
     "outcome": "beta",
     "split": "lopo",
     "model": "B1",
-    "mae": 0.14128703066629256,
-    "spearman": 0.8125523123105738,
+    "mae": 0.12239041732875118,
+    "spearman": 0.8117777152540337,
     "sign_agree": 0.9444444444444444,
     "n": 36
    },
@@ -493,16 +493,16 @@
     "outcome": "beta",
     "split": "lopo",
     "model": "B2",
-    "mae": 0.151830418576338,
-    "spearman": 0.8864864864864865,
-    "sign_agree": 0.8333333333333334,
+    "mae": 0.13370555323119718,
+    "spearman": 0.8676962676962677,
+    "sign_agree": 0.7777777777777778,
     "n": 36
    },
    {
     "outcome": "loss_default",
     "split": "headline",
     "model": "P",
-    "mae": 0.15931661280283171,
+    "mae": 0.15922279040483014,
     "spearman": 0.35,
     "sign_agree": 0.8888888888888888,
     "n": 9
@@ -511,7 +511,7 @@
     "outcome": "loss_default",
     "split": "headline",
     "model": "B0",
-    "mae": 0.23032563649300414,
+    "mae": 0.22670003135617278,
     "spearman": null,
     "sign_agree": 1.0,
     "n": 9
@@ -520,7 +520,7 @@
     "outcome": "loss_default",
     "split": "headline",
     "model": "B1",
-    "mae": 0.22649217123703705,
+    "mae": 0.2231827097648148,
     "spearman": 0.5270462766947298,
     "sign_agree": 1.0,
     "n": 9
@@ -529,7 +529,7 @@
     "outcome": "loss_default",
     "split": "headline",
     "model": "B2",
-    "mae": 0.22649217123703697,
+    "mae": 0.22318270976481472,
     "spearman": 0.8499999999999999,
     "sign_agree": 1.0,
     "n": 9
@@ -538,36 +538,36 @@
     "outcome": "loss_default",
     "split": "lopo",
     "model": "P",
-    "mae": 0.17780639096509562,
-    "spearman": 0.26190690199087363,
-    "sign_agree": 0.6388888888888888,
+    "mae": 0.17694576458550537,
+    "spearman": 0.28645552034074717,
+    "sign_agree": 0.6666666666666666,
     "n": 36
    },
    {
     "outcome": "loss_default",
     "split": "lopo",
     "model": "B0",
-    "mae": 0.24300610231790123,
-    "spearman": -0.8297769587813966,
-    "sign_agree": 0.6944444444444444,
+    "mae": 0.24226653583007543,
+    "spearman": -0.8449019488023874,
+    "sign_agree": 0.7222222222222222,
     "n": 36
    },
    {
     "outcome": "loss_default",
     "split": "lopo",
     "model": "B1",
-    "mae": 0.2388740195888889,
-    "spearman": -0.2907465700180771,
-    "sign_agree": 0.6944444444444444,
+    "mae": 0.23800027056316875,
+    "spearman": -0.30026320147162583,
+    "sign_agree": 0.7222222222222222,
     "n": 36
    },
    {
     "outcome": "loss_default",
     "split": "lopo",
     "model": "B2",
-    "mae": 0.23722473222696017,
-    "spearman": -0.14126783048560584,
-    "sign_agree": 0.6944444444444444,
+    "mae": 0.23633704384552745,
+    "spearman": -0.12618612839715018,
+    "sign_agree": 0.7222222222222222,
     "n": 36
    }
   ],
@@ -576,31 +576,31 @@
     "outcome": "V_comm",
     "model": "P",
     "param": "mission[search]",
-    "value": 0.05634495740655283
+    "value": 0.05838256985882194
    },
    {
     "outcome": "V_comm",
     "model": "P",
     "param": "mission[haul]",
-    "value": -0.011263928260237472
+    "value": -0.011875139948625987
    },
    {
     "outcome": "V_comm",
     "model": "P",
     "param": "mission[escort]",
-    "value": 0.05272866931648381
+    "value": 0.05202124777127165
    },
    {
     "outcome": "V_comm",
     "model": "P",
     "param": "log_S",
-    "value": 0.011174663466803318
+    "value": 0.013591793988096408
    },
    {
     "outcome": "V_comm",
     "model": "P",
     "param": "R_late",
-    "value": 0.008923233260441909
+    "value": 0.008737836516012927
    },
    {
     "outcome": "V_comm",
@@ -654,391 +654,391 @@
     "outcome": "V_gossip",
     "model": "P",
     "param": "mission[search]",
-    "value": 0.07958655501797383
+    "value": 0.08804472971438349
    },
    {
     "outcome": "V_gossip",
     "model": "P",
     "param": "mission[haul]",
-    "value": -0.011645396853874274
+    "value": -0.005173150103564195
    },
    {
     "outcome": "V_gossip",
     "model": "P",
     "param": "mission[escort]",
-    "value": 0.07108621839638626
+    "value": 0.06163389331499067
    },
    {
     "outcome": "V_gossip",
     "model": "P",
     "param": "log_S",
-    "value": 0.0030599197322095017
+    "value": 0.013169832622852644
    },
    {
     "outcome": "V_gossip",
     "model": "P",
     "param": "R_late",
-    "value": 0.03084059453616982
+    "value": -0.008590922842515522
    },
    {
     "outcome": "V_gossip",
     "model": "B0",
     "param": "intercept",
-    "value": 0.04984284848335047
+    "value": 0.04588803653678937
    },
    {
     "outcome": "V_gossip",
     "model": "B1",
     "param": "mission[search]",
-    "value": 0.0780968368697255
+    "value": 0.07680082426279346
    },
    {
     "outcome": "V_gossip",
     "model": "B1",
     "param": "mission[haul]",
-    "value": -7.54386567220396e-05
+    "value": -0.0047203176763423865
    },
    {
     "outcome": "V_gossip",
     "model": "B1",
     "param": "mission[escort]",
-    "value": 0.07150714723704796
+    "value": 0.06558360302391704
    },
    {
     "outcome": "V_gossip",
     "model": "B2",
     "param": "mission[search]",
-    "value": 0.11262901391004143
+    "value": 0.11043176341545116
    },
    {
     "outcome": "V_gossip",
     "model": "B2",
     "param": "mission[haul]",
-    "value": 0.034456738383593866
+    "value": 0.028910621476315276
    },
    {
     "outcome": "V_gossip",
     "model": "B2",
     "param": "mission[escort]",
-    "value": 0.10603932427736386
+    "value": 0.09921454217657472
    },
    {
     "outcome": "V_gossip",
     "model": "B2",
     "param": "tempo",
-    "value": -0.10359653112094754
+    "value": -0.10089281745797296
    },
    {
     "outcome": "V_couple",
     "model": "P",
     "param": "mission[search]",
-    "value": -0.030810755676895556
+    "value": -0.026667787768392737
    },
    {
     "outcome": "V_couple",
     "model": "P",
     "param": "mission[haul]",
-    "value": 0.051184822965733644
+    "value": 0.059402540184055434
    },
    {
     "outcome": "V_couple",
     "model": "P",
     "param": "mission[escort]",
-    "value": 0.08566837732651365
+    "value": 0.07762903878964958
    },
    {
     "outcome": "V_couple",
     "model": "P",
     "param": "log_S",
-    "value": -0.04690469769091819
+    "value": -0.04187909361579462
    },
    {
     "outcome": "V_couple",
     "model": "P",
     "param": "R_late",
-    "value": 0.16216430595747802
+    "value": 0.12228218906669044
    },
    {
     "outcome": "V_couple",
     "model": "B0",
     "param": "intercept",
-    "value": 0.05965993069194785
+    "value": 0.055701424503674504
    },
    {
     "outcome": "V_couple",
     "model": "B1",
     "param": "mission[search]",
-    "value": 0.013620479090918083
+    "value": 0.012317073528208752
    },
    {
     "outcome": "V_couple",
     "model": "B1",
     "param": "mission[haul]",
-    "value": 0.09572968260234074
+    "value": 0.09115178924838815
    },
    {
     "outcome": "V_couple",
     "model": "B1",
     "param": "mission[escort]",
-    "value": 0.06962963038258474
+    "value": 0.06363541073442663
    },
    {
     "outcome": "V_couple",
     "model": "B2",
     "param": "mission[search]",
-    "value": 0.011901480372943297
+    "value": 0.009642117227180315
    },
    {
     "outcome": "V_couple",
     "model": "B2",
     "param": "mission[haul]",
-    "value": 0.09401068388436597
+    "value": 0.0884768329473597
    },
    {
     "outcome": "V_couple",
     "model": "B2",
     "param": "mission[escort]",
-    "value": 0.06791063166460994
+    "value": 0.060960454433398155
    },
    {
     "outcome": "V_couple",
     "model": "B2",
     "param": "tempo",
-    "value": 0.005156996153924509
+    "value": 0.008024868903085472
    },
    {
     "outcome": "V_sac",
     "model": "P",
     "param": "mission[search]",
-    "value": 0.05383462901126088
+    "value": 0.060921316970078965
    },
    {
     "outcome": "V_sac",
     "model": "P",
     "param": "mission[haul]",
-    "value": 0.05731308652358189
+    "value": 0.06356532830351502
    },
    {
     "outcome": "V_sac",
     "model": "P",
     "param": "mission[escort]",
-    "value": -0.012529930853266716
+    "value": -0.021590155423386374
    },
    {
     "outcome": "V_sac",
     "model": "P",
     "param": "log_S",
-    "value": 0.039805033739827196
+    "value": 0.04825201995381701
    },
    {
     "outcome": "V_sac",
     "model": "P",
     "param": "R_late",
-    "value": -0.0812354294698747
+    "value": -0.11917980502609853
    },
    {
     "outcome": "V_sac",
     "model": "B0",
     "param": "intercept",
-    "value": 0.019164174861081466
+    "value": 0.015173311442122436
    },
    {
     "outcome": "V_sac",
     "model": "B1",
     "param": "mission[search]",
-    "value": 0.018046468154682686
+    "value": 0.016742417038747556
    },
    {
     "outcome": "V_sac",
     "model": "B1",
     "param": "mission[haul]",
-    "value": 0.03921624333532906
+    "value": 0.03457237791017603
    },
    {
     "outcome": "V_sac",
     "model": "B1",
     "param": "mission[escort]",
-    "value": 0.00022981309323262034
+    "value": -0.0057948606225562945
    },
    {
     "outcome": "V_sac",
     "model": "B2",
     "param": "mission[search]",
-    "value": 0.018721403367758814
+    "value": 0.01650544647111146
    },
    {
     "outcome": "V_sac",
     "model": "B2",
     "param": "mission[haul]",
-    "value": 0.03989117854840518
+    "value": 0.03433540734253993
    },
    {
     "outcome": "V_sac",
     "model": "B2",
     "param": "mission[escort]",
-    "value": 0.0009047483063087359
+    "value": -0.006031831190192395
    },
    {
     "outcome": "V_sac",
     "model": "B2",
     "param": "tempo",
-    "value": -0.0020248056392283276
+    "value": 0.0007109117029083442
    },
    {
     "outcome": "beta",
     "model": "P",
     "param": "mission[search]",
-    "value": 0.35613595464297965
+    "value": 0.33232248797514036
    },
    {
     "outcome": "beta",
     "model": "P",
     "param": "mission[haul]",
-    "value": 0.7204597056371963
+    "value": 0.7302740798676298
    },
    {
     "outcome": "beta",
     "model": "P",
     "param": "mission[escort]",
-    "value": 0.05261035117902584
+    "value": 0.04029709701877027
    },
    {
     "outcome": "beta",
     "model": "P",
     "param": "log_S",
-    "value": -0.021751243413337357
+    "value": -0.05029087697261299
    },
    {
     "outcome": "beta",
     "model": "P",
     "param": "R_late",
-    "value": 1.1495671192738186
+    "value": 0.9915025438460358
    },
    {
     "outcome": "beta",
     "model": "B0",
     "param": "intercept",
-    "value": 0.5196117831288264
+    "value": 0.4940702301680344
    },
    {
     "outcome": "beta",
     "model": "B1",
     "param": "mission[search]",
-    "value": 0.4132834239142154
+    "value": 0.4078678390556208
    },
    {
     "outcome": "beta",
     "model": "B1",
     "param": "mission[haul]",
-    "value": 1.1166009698693506
+    "value": 1.063603510817332
    },
    {
     "outcome": "beta",
     "model": "B1",
     "param": "mission[escort]",
-    "value": 0.0289509556029129
+    "value": 0.010739340631150087
    },
    {
     "outcome": "beta",
     "model": "B2",
     "param": "mission[search]",
-    "value": 0.3008623961927417
+    "value": 0.32800952329336075
    },
    {
     "outcome": "beta",
     "model": "B2",
     "param": "mission[haul]",
-    "value": 1.0041799421478768
+    "value": 0.9837451950550719
    },
    {
     "outcome": "beta",
     "model": "B2",
     "param": "mission[escort]",
-    "value": -0.08347007211856128
+    "value": -0.0691189751311104
    },
    {
     "outcome": "beta",
     "model": "B2",
     "param": "tempo",
-    "value": 0.337263083164423
+    "value": 0.23957494728678164
    },
    {
     "outcome": "loss_default",
     "model": "P",
     "param": "mission[search]",
-    "value": 0.4409696670087811
+    "value": 0.44718508753614344
    },
    {
     "outcome": "loss_default",
     "model": "P",
     "param": "mission[haul]",
-    "value": 0.4506137503115099
+    "value": 0.4452624324149567
    },
    {
     "outcome": "loss_default",
     "model": "P",
     "param": "mission[escort]",
-    "value": -0.07033869211145159
+    "value": -0.07344231842923211
    },
    {
     "outcome": "loss_default",
     "model": "P",
     "param": "log_S",
-    "value": 0.39482264830604236
+    "value": 0.40126028739530717
    },
    {
     "outcome": "loss_default",
     "model": "P",
     "param": "R_late",
-    "value": -0.8413391053570376
+    "value": -0.8323471011881131
    },
    {
     "outcome": "loss_default",
     "model": "B0",
     "param": "intercept",
-    "value": 0.13340727898518517
+    "value": 0.1334494758277778
    },
    {
     "outcome": "loss_default",
     "model": "B1",
     "param": "mission[search]",
-    "value": 0.08478009199074073
+    "value": 0.08519603523148146
    },
    {
     "outcome": "loss_default",
     "model": "B1",
     "param": "mission[haul]",
-    "value": 0.2586805564648148
+    "value": 0.2596390337518518
    },
    {
     "outcome": "loss_default",
     "model": "B1",
     "param": "mission[escort]",
-    "value": 0.056761188500000004
+    "value": 0.05551335850000001
    },
    {
     "outcome": "loss_default",
     "model": "B2",
     "param": "mission[search]",
-    "value": 0.029590138542397754
+    "value": 0.030297971736842275
    },
    {
     "outcome": "loss_default",
     "model": "B2",
     "param": "mission[haul]",
-    "value": 0.20349060301647184
+    "value": 0.2047409702572126
    },
    {
     "outcome": "loss_default",
     "model": "B2",
     "param": "mission[escort]",
-    "value": 0.0015712350516570044
+    "value": 0.0006152950053607221
    },
    {
     "outcome": "loss_default",
     "model": "B2",
     "param": "tempo",
-    "value": 0.16556986034502924
+    "value": 0.16469419048391798
    }
   ]
  },
@@ -1062,84 +1062,84 @@
   "per_outcome": [
    {
     "outcome": "V_comm",
-    "lopo_mae_P": 0.053924486286671514,
+    "lopo_mae_P": 0.05370730100415719,
     "lopo_mae_B1": 0.05745510593519292,
     "lopo_mae_B2": 0.06691771961942972,
-    "lopo_rho_P": 0.3766769865841073,
+    "lopo_rho_P": 0.3952528379772961,
     "lopo_supported": false,
-    "headline_mae_P": 0.019665317708867935,
+    "headline_mae_P": 0.018250950948252617,
     "headline_mae_B1": 0.029440839472200258,
     "headline_mae_B2": 0.04136410524459313,
-    "headline_rho_P": 0.5,
+    "headline_rho_P": 1.0,
     "headline_supported": true,
     "supported": false
    },
    {
     "outcome": "V_gossip",
-    "lopo_mae_P": 0.06902935501043618,
-    "lopo_mae_B1": 0.06306591861719661,
-    "lopo_mae_B2": 0.0697171851862818,
-    "lopo_rho_P": 0.23219814241486067,
+    "lopo_mae_P": 0.056763668404242774,
+    "lopo_mae_B1": 0.05890710078637418,
+    "lopo_mae_B2": 0.06642288962792936,
+    "lopo_rho_P": 0.43859649122807015,
     "lopo_supported": false,
-    "headline_mae_P": 0.055507894644927724,
-    "headline_mae_B1": 0.058708220088443924,
-    "headline_mae_B2": 0.07097405373448289,
+    "headline_mae_P": 0.0341402607803361,
+    "headline_mae_B1": 0.04107912187839213,
+    "headline_mae_B2": 0.04937223421031502,
     "headline_rho_P": 0.5,
-    "headline_supported": false,
+    "headline_supported": true,
     "supported": false
    },
    {
     "outcome": "V_couple",
-    "lopo_mae_P": 0.11182763036876703,
-    "lopo_mae_B1": 0.11028204288230697,
-    "lopo_mae_B2": 0.11028204288230697,
-    "lopo_rho_P": -0.5789473684210527,
+    "lopo_mae_P": 0.09941302247853713,
+    "lopo_mae_B1": 0.10829896985015026,
+    "lopo_mae_B2": 0.10799704583373657,
+    "lopo_rho_P": -0.391124871001032,
     "lopo_supported": false,
-    "headline_mae_P": 0.08983236359107706,
-    "headline_mae_B1": 0.052891461555762666,
-    "headline_mae_B2": 0.05289146155576271,
-    "headline_rho_P": 0.5,
-    "headline_supported": false,
-    "supported": false
-   },
-   {
-    "outcome": "V_sac",
-    "lopo_mae_P": 0.02609472038156392,
-    "lopo_mae_B1": 0.03192492951991575,
-    "lopo_mae_B2": 0.032721114712431464,
-    "lopo_rho_P": 0.413828689370485,
-    "lopo_supported": false,
-    "headline_mae_P": 0.02949096111030597,
-    "headline_mae_B1": 0.020087972251488367,
-    "headline_mae_B2": 0.01989943121005628,
+    "headline_mae_P": 0.05520240425574958,
+    "headline_mae_B1": 0.055326931214268966,
+    "headline_mae_B2": 0.0535153871157869,
     "headline_rho_P": 1.0,
     "headline_supported": false,
     "supported": false
    },
    {
-    "outcome": "beta",
-    "lopo_mae_P": 0.3497512744603888,
-    "lopo_mae_B1": 0.2541332397043869,
-    "lopo_mae_B2": 0.227476174636607,
-    "lopo_rho_P": 0.5830753353973168,
+    "outcome": "V_sac",
+    "lopo_mae_P": 0.047677423090565,
+    "lopo_mae_B1": 0.038508211992413076,
+    "lopo_mae_B2": 0.038433666171323495,
+    "lopo_rho_P": -0.16818399175786325,
     "lopo_supported": false,
-    "headline_mae_P": 0.7613896061425481,
-    "headline_mae_B1": 0.3434191388751719,
-    "headline_mae_B2": 0.2515635340932198,
+    "headline_mae_P": 0.07752924242590167,
+    "headline_mae_B1": 0.023601675090906205,
+    "headline_mae_B2": 0.023550140517050743,
+    "headline_rho_P": -0.5,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "beta",
+    "lopo_mae_P": 0.3038446120893398,
+    "lopo_mae_B1": 0.21858455987093706,
+    "lopo_mae_B2": 0.20196192960524184,
+    "lopo_rho_P": 0.5748194014447885,
+    "lopo_supported": false,
+    "headline_mae_P": 0.6602503540075478,
+    "headline_mae_B1": 0.2977438869844938,
+    "headline_mae_B2": 0.22878530075597903,
     "headline_rho_P": -0.5,
     "headline_supported": false,
     "supported": false
    },
    {
     "outcome": "loss_default",
-    "lopo_mae_P": 0.2662485090268667,
-    "lopo_mae_B1": 0.3459141109925926,
-    "lopo_mae_B2": 0.3588633202063719,
-    "lopo_rho_P": 0.3605444323309193,
+    "lopo_mae_P": 0.263409990929529,
+    "lopo_mae_B1": 0.3437198589987654,
+    "lopo_mae_B2": 0.3576289342756741,
+    "lopo_rho_P": 0.4025904302703851,
     "lopo_supported": false,
-    "headline_mae_P": 0.3612731132534119,
-    "headline_mae_B1": 0.4149305524240741,
-    "headline_mae_B2": 0.41493055242407423,
+    "headline_mae_P": 0.3604039008656103,
+    "headline_mae_B1": 0.40881799624814813,
+    "headline_mae_B2": 0.40881799624814824,
     "headline_rho_P": 0.5,
     "headline_supported": true,
     "supported": false
@@ -1158,12 +1158,12 @@
   "per_outcome": [
    {
     "outcome": "V_comm",
-    "lopo_mae_P": 0.025704671967763534,
+    "lopo_mae_P": 0.025704916236383737,
     "lopo_mae_B1": 0.02498390942862888,
     "lopo_mae_B2": 0.02498537243642862,
     "lopo_rho_P": 0.6223938223938225,
     "lopo_supported": false,
-    "headline_mae_P": 0.032764224728925005,
+    "headline_mae_P": 0.03276698775361059,
     "headline_mae_B1": 0.031169176474931084,
     "headline_mae_B2": 0.030719979000112006,
     "headline_rho_P": 0.9833333333333333,
@@ -1172,71 +1172,71 @@
    },
    {
     "outcome": "V_gossip",
-    "lopo_mae_P": 0.02359895977024022,
-    "lopo_mae_B1": 0.023277810216046062,
-    "lopo_mae_B2": 0.022677939149096864,
-    "lopo_rho_P": 0.6972972972972973,
+    "lopo_mae_P": 0.02192922029128684,
+    "lopo_mae_B1": 0.021600145691105924,
+    "lopo_mae_B2": 0.021254970218433804,
+    "lopo_rho_P": 0.6864864864864866,
     "lopo_supported": false,
-    "headline_mae_P": 0.021750870893168,
-    "headline_mae_B1": 0.02208925078761666,
-    "headline_mae_B2": 0.020341214874075777,
-    "headline_rho_P": 0.9333333333333332,
-    "headline_supported": false,
-    "supported": false
-   },
-   {
-    "outcome": "V_couple",
-    "lopo_mae_P": 0.014616683412716689,
-    "lopo_mae_B1": 0.01500543459836265,
-    "lopo_mae_B2": 0.014769722720442876,
-    "lopo_rho_P": 0.48133848133848134,
-    "lopo_supported": false,
-    "headline_mae_P": 0.007474877886104651,
-    "headline_mae_B1": 0.00806028960832881,
-    "headline_mae_B2": 0.007599129987997458,
+    "headline_mae_P": 0.01974835488069466,
+    "headline_mae_B1": 0.019885923870630453,
+    "headline_mae_B2": 0.018736813573581985,
     "headline_rho_P": 0.8833333333333333,
     "headline_supported": false,
     "supported": false
    },
    {
-    "outcome": "V_sac",
-    "lopo_mae_P": 0.027657317107894444,
-    "lopo_mae_B1": 0.026380155220415303,
-    "lopo_mae_B2": 0.026914916409744593,
-    "lopo_rho_P": 0.1685971685971686,
+    "outcome": "V_couple",
+    "lopo_mae_P": 0.012478937506613734,
+    "lopo_mae_B1": 0.012392414058248194,
+    "lopo_mae_B2": 0.01250532936626044,
+    "lopo_rho_P": 0.6508754077727389,
     "lopo_supported": false,
-    "headline_mae_P": 0.01868005742712311,
-    "headline_mae_B1": 0.017342928269505255,
-    "headline_mae_B2": 0.015385601721039616,
-    "headline_rho_P": 0.7,
+    "headline_mae_P": 0.007684633017236407,
+    "headline_mae_B1": 0.007799421067675511,
+    "headline_mae_B2": 0.007811478931401532,
+    "headline_rho_P": 0.8666666666666667,
+    "headline_supported": false,
+    "supported": false
+   },
+   {
+    "outcome": "V_sac",
+    "lopo_mae_P": 0.026703624042851724,
+    "lopo_mae_B1": 0.026137358567228146,
+    "lopo_mae_B2": 0.0262784910226281,
+    "lopo_rho_P": 0.10480213590080138,
+    "lopo_supported": false,
+    "headline_mae_P": 0.016067805523016253,
+    "headline_mae_B1": 0.016114093796147255,
+    "headline_mae_B2": 0.015500388909877098,
+    "headline_rho_P": 0.5499999999999999,
     "headline_supported": false,
     "supported": false
    },
    {
     "outcome": "beta",
-    "lopo_mae_P": 0.01679272726807037,
-    "lopo_mae_B1": 0.017698894184510316,
-    "lopo_mae_B2": 0.017615593458845405,
-    "lopo_rho_P": 0.8777348777348778,
+    "lopo_mae_P": 0.020531706339317616,
+    "lopo_mae_B1": 0.021499191977777735,
+    "lopo_mae_B2": 0.02147418642538538,
+    "lopo_rho_P": 0.8723294723294724,
     "lopo_supported": false,
-    "headline_mae_P": 0.023405616672363676,
-    "headline_mae_B1": 0.024273999180911533,
-    "headline_mae_B2": 0.024257743042022547,
-    "headline_rho_P": 0.9833333333333333,
+    "headline_mae_P": 0.029582353471176645,
+    "headline_mae_B1": 0.030368525064769947,
+    "headline_mae_B2": 0.030411364617192255,
+    "headline_rho_P": 0.9500000000000001,
     "headline_supported": false,
     "supported": false
    },
    {
     "outcome": "loss_default",
-    "lopo_mae_P": 0.057951574121101,
-    "lopo_mae_B1": 0.05686969508425927,
-    "lopo_mae_B2": 0.05710583339765,
-    "lopo_rho_P": -0.2388668212050162,
+    "lopo_mae_P": 0.057016293788798196,
+    "lopo_mae_B1": 0.05555053182551439,
+    "lopo_mae_B2": 0.056161203581110576,
+    "lopo_rho_P": -0.11730495956497121,
     "lopo_supported": false,
-    "headline_mae_P": 0.02121393221470813,
-    "headline_mae_B1": 0.018545980024074076,
-    "headline_mae_B2": 0.018385228991563793,
-    "headline_rho_P": 0.9166666666666666,
+    "headline_mae_P": 0.02104348878568183,
+    "headline_mae_B1": 0.018113961601234574,
+    "headline_mae_B2": 0.01776834689176955,
+    "headline_rho_P": 0.8833333333333333,
     "headline_supported": false,
     "supported": false
    }
@@ -1262,14 +1262,14 @@
     "id": "1c",
     "expectation": "V_comm decreases as S grows (weak, non-monotone would not surprise)",
     "statistic": "Spearman rho(V_comm, log S): pooled; per-cell share negative",
-    "value": -0.20875,
+    "value": -0.20438,
     "verdict": "mixed"
    },
    {
     "id": "1d",
     "expectation": "V_comm smaller on jam than corrosion/quake at matched S",
     "statistic": "mean residual of jam V_comm from (mission + log S) OLS fitted on corrosion+quake",
-    "value": -0.03046,
+    "value": -0.02914,
     "verdict": "pass"
    },
    {
@@ -1277,9 +1277,9 @@
     "expectation": "V_couple ordered escort > haul > search",
     "statistic": "mission means of V_couple (pooled; per-planet share)",
     "value": {
-     "escort": 0.07996,
-     "haul": 0.10895,
-     "search": 0.01479
+     "escort": 0.06827,
+     "haul": 0.09989,
+     "search": 0.01364
     },
     "verdict": "fail"
    },
@@ -1288,10 +1288,10 @@
     "expectation": "V_couple largest on quake",
     "statistic": "planet means of V_couple (pooled; per-mission share quake is max)",
     "value": {
-     "combined": 0.09262,
-     "corrosion": 0.01316,
-     "jam": 0.11383,
-     "quake": 0.05199
+     "combined": 0.0753,
+     "corrosion": 0.01672,
+     "jam": 0.10584,
+     "quake": 0.04455
     },
     "verdict": "fail"
    },
@@ -1299,8 +1299,8 @@
     "id": "2c",
     "expectation": "V_couple decreases with S",
     "statistic": "Spearman rho(V_couple, log S): pooled; per-cell share negative",
-    "value": 0.3825,
-    "verdict": "fail"
+    "value": 0.28733,
+    "verdict": "mixed"
    },
    {
     "id": "3a",
@@ -1314,9 +1314,9 @@
     "expectation": "beta smallest for escort",
     "statistic": "mission means of beta (pooled; per-planet share escort is min)",
     "value": {
-     "escort": 0.03849,
-     "haul": 1.17843,
-     "search": 0.42404
+     "escort": 0.01412,
+     "haul": 1.12075,
+     "search": 0.41988
     },
     "verdict": "pass"
    },
@@ -1324,42 +1324,42 @@
     "id": "3c[0.25]",
     "expectation": "corrosion/combined raise N*(0.25) relative to jam",
     "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
-    "value": 0.05556,
+    "value": 0.33333,
     "verdict": "pass"
    },
    {
     "id": "3c[0.5]",
     "expectation": "corrosion/combined raise N*(0.5) relative to jam",
     "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
-    "value": -0.44444,
-    "verdict": "fail"
+    "value": -0.33333,
+    "verdict": "mixed"
    },
    {
     "id": "3c[0.75]",
     "expectation": "corrosion/combined raise N*(0.75) relative to jam",
     "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
-    "value": -0.88889,
+    "value": -0.72222,
     "verdict": "fail"
    },
    {
     "id": "4a",
     "expectation": "V_sac > 0 on corrosion/combined",
     "statistic": "mean V_sac on corrosion+combined (share > 0)",
-    "value": 0.05052,
+    "value": 0.04363,
     "verdict": "pass"
    },
    {
     "id": "4b",
     "expectation": "V_sac ~ 0 on jam (and smaller than on corrosion/combined)",
     "statistic": "mean jam V_sac; pass if its 90% t-interval over conditions contains 0 and |mean| < corrosion/combined mean",
-    "value": 0.00805,
-    "verdict": "mixed"
+    "value": 0.0,
+    "verdict": "pass"
    },
    {
     "id": "4c",
     "expectation": "default: exposure last third > first third on corrosion/combined",
     "statistic": "mean over conditions of exp_last - exp_first (default arm, n in {4,6,8})",
-    "value": -0.09792,
+    "value": -0.09565,
     "verdict": "fail"
    },
    {
@@ -1389,7 +1389,7 @@
     "id": "1c",
     "expectation": "V_comm decreases as S grows (weak, non-monotone would not surprise)",
     "statistic": "Spearman rho(V_comm, log S): pooled; per-cell share negative",
-    "value": -0.12201,
+    "value": -0.1251,
     "verdict": "mixed"
    },
    {
@@ -1404,9 +1404,9 @@
     "expectation": "V_couple ordered escort > haul > search",
     "statistic": "mission means of V_couple (pooled; per-planet share)",
     "value": {
-     "escort": 0.01904,
-     "haul": 0.03998,
-     "search": 0.00777
+     "escort": 0.01872,
+     "haul": 0.04069,
+     "search": 0.0038
     },
     "verdict": "fail"
    },
@@ -1415,10 +1415,10 @@
     "expectation": "V_couple largest on quake",
     "statistic": "planet means of V_couple (pooled; per-mission share quake is max)",
     "value": {
-     "combined": 0.02528,
-     "corrosion": 0.0153,
-     "jam": 0.03991,
-     "quake": 0.00857
+     "combined": 0.02675,
+     "corrosion": 0.01384,
+     "jam": 0.03353,
+     "quake": 0.01015
     },
     "verdict": "fail"
    },
@@ -1426,8 +1426,8 @@
     "id": "2c",
     "expectation": "V_couple decreases with S",
     "statistic": "Spearman rho(V_couple, log S): pooled; per-cell share negative",
-    "value": -0.0296,
-    "verdict": "pass"
+    "value": 0.15036,
+    "verdict": "fail"
    },
    {
     "id": "3a",
@@ -1441,9 +1441,9 @@
     "expectation": "beta smallest for escort",
     "statistic": "mission means of beta (pooled; per-planet share escort is min)",
     "value": {
-     "escort": 0.00763,
-     "haul": 0.91328,
-     "search": 0.40986
+     "escort": 0.00372,
+     "haul": 0.90077,
+     "search": 0.40835
     },
     "verdict": "pass"
    },
@@ -1451,42 +1451,42 @@
     "id": "3c[0.25]",
     "expectation": "corrosion/combined raise N*(0.25) relative to jam",
     "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
-    "value": 0.33333,
+    "value": 0.16667,
     "verdict": "pass"
    },
    {
     "id": "3c[0.5]",
     "expectation": "corrosion/combined raise N*(0.5) relative to jam",
     "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
-    "value": 0.0,
-    "verdict": "fail"
+    "value": 0.16667,
+    "verdict": "pass"
    },
    {
     "id": "3c[0.75]",
     "expectation": "corrosion/combined raise N*(0.75) relative to jam",
     "statistic": "mean N*(corrosion or combined) - N*(jam) over matched (mission, tempo) pairs; pass if mean > 0 and more pairs higher than lower",
-    "value": 0.88889,
+    "value": 0.55556,
     "verdict": "pass"
    },
    {
     "id": "4a",
     "expectation": "V_sac > 0 on corrosion/combined",
     "statistic": "mean V_sac on corrosion+combined (share > 0)",
-    "value": 0.03736,
+    "value": 0.03737,
     "verdict": "pass"
    },
    {
     "id": "4b",
     "expectation": "V_sac ~ 0 on jam (and smaller than on corrosion/combined)",
     "statistic": "mean jam V_sac; pass if its 90% t-interval over conditions contains 0 and |mean| < corrosion/combined mean",
-    "value": 0.00638,
-    "verdict": "mixed"
+    "value": 0.0,
+    "verdict": "pass"
    },
    {
     "id": "4c",
     "expectation": "default: exposure last third > first third on corrosion/combined",
     "statistic": "mean over conditions of exp_last - exp_first (default arm, n in {4,6,8})",
-    "value": -0.04558,
+    "value": -0.04408,
     "verdict": "fail"
    },
    {
@@ -1514,9 +1514,9 @@
   "adv_cells_evaluated": 12,
   "adv_gate_pass": true,
   "br_cells_covered": 12,
-  "br_mean_gap": 0.0006304501694444442,
-  "br_mean_rel_gap": 0.0012338157498907613,
-  "br_share_rows_pool_overestimates": 0.4361111111111111
+  "br_mean_gap": 0.0010850521687500011,
+  "br_mean_rel_gap": 0.003320622178894016,
+  "br_share_rows_pool_overestimates": 0.44722222222222224
  },
  "seed_spread": {
   "adv": [
@@ -1530,64 +1530,64 @@
    },
    {
     "outcome": "V_gossip",
-    "seed_spread": 0.050614579900185176,
-    "between_spread": 0.08884423037556533,
+    "seed_spread": 0.04719501107513559,
+    "between_spread": 0.08168885864686208,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "V_couple",
-    "seed_spread": 0.025769390712761863,
-    "between_spread": 0.07408141226636943,
+    "seed_spread": 0.019259834838789364,
+    "between_spread": 0.06874358098805375,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "V_sac",
-    "seed_spread": 0.02057729647999905,
-    "between_spread": 0.03773798321317732,
+    "seed_spread": 0.02013868865447532,
+    "between_spread": 0.0389119574845005,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "beta",
-    "seed_spread": 0.04233128868647227,
-    "between_spread": 0.5268902955045731,
+    "seed_spread": 0.02125023187218359,
+    "between_spread": 0.5003771225659663,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "Nstar_0.25",
-    "seed_spread": 0.7546154281781181,
-    "between_spread": 4.127626628863322,
+    "seed_spread": 0.7817359599705717,
+    "between_spread": 4.2594432902501635,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "Nstar_0.5",
-    "seed_spread": 0.754615428178118,
-    "between_spread": 4.338824359823387,
+    "seed_spread": 0.26352313834736496,
+    "between_spread": 4.411025148096852,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "Nstar_0.75",
-    "seed_spread": 0.5527707983925667,
-    "between_spread": 4.211850251336404,
+    "seed_spread": 0.372677996249965,
+    "between_spread": 4.046064127103638,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "loss_default",
-    "seed_spread": 0.030596411709033065,
-    "between_spread": 0.2816563400251066,
+    "seed_spread": 0.030547569162903493,
+    "between_spread": 0.2810852077885801,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
@@ -1602,8 +1602,8 @@
    },
    {
     "outcome": "coupled_frac_default",
-    "seed_spread": 0.009589602360243803,
-    "between_spread": 0.20186268458784032,
+    "seed_spread": 0.01074920356383395,
+    "between_spread": 0.20213818339061873,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
@@ -1620,64 +1620,64 @@
    },
    {
     "outcome": "V_gossip",
-    "seed_spread": 0.03925006788264967,
-    "between_spread": 0.04735921443274223,
+    "seed_spread": 0.03906753104501277,
+    "between_spread": 0.04504658412923622,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "V_couple",
-    "seed_spread": 0.01883271544986828,
-    "between_spread": 0.020387722252135247,
+    "seed_spread": 0.01893992410664943,
+    "between_spread": 0.019167098892273634,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "V_sac",
-    "seed_spread": 0.014594720625983016,
-    "between_spread": 0.03757798527930276,
+    "seed_spread": 0.01433583556376538,
+    "between_spread": 0.03784247101824171,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "beta",
-    "seed_spread": 0.012373624030420331,
-    "between_spread": 0.3761785048778122,
+    "seed_spread": 0.010311961996369048,
+    "between_spread": 0.37257258754307415,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "Nstar_0.25",
-    "seed_spread": 0.726483157256779,
-    "between_spread": 4.286190449738388,
+    "seed_spread": 0.6346477588219923,
+    "between_spread": 4.308260798873614,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "Nstar_0.5",
-    "seed_spread": 0.2886751345948129,
-    "between_spread": 4.560701700396551,
+    "seed_spread": 0.20412414523193154,
+    "between_spread": 4.553299867408216,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "Nstar_0.75",
-    "seed_spread": 1.1843892002959913,
-    "between_spread": 3.7678674866329094,
+    "seed_spread": 0.3535533905932738,
+    "between_spread": 3.0983866769659336,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
    },
    {
     "outcome": "loss_default",
-    "seed_spread": 0.00413903751167985,
-    "between_spread": 0.07298284884753357,
+    "seed_spread": 0.00373053712231946,
+    "between_spread": 0.07317560003743727,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
@@ -1692,8 +1692,8 @@
    },
    {
     "outcome": "coupled_frac_default",
-    "seed_spread": 0.004742141810724288,
-    "between_spread": 0.11259524790491778,
+    "seed_spread": 0.004491601623736983,
+    "between_spread": 0.11332872883619627,
     "unresolved": false,
     "n_conditions": 36,
     "n_seeds": 2
@@ -1705,18 +1705,18 @@
    "planet": "corrosion",
    "mission": "search",
    "J_silent": 0.4815529027777778,
-   "J_gossip": 0.5441979533333334,
+   "J_gossip": 0.5429000361111112,
    "J_blackboard": 0.51559407,
    "best_comm": "gossip",
-   "best_comm_margin": 0.028603883333333413,
+   "best_comm_margin": 0.027305966111111135,
    "V_comm": 0.06335230498909167,
-   "V_gossip": 0.1151140538362242,
-   "V_couple": 0.0014968407615118106,
-   "V_sac": 0.0637458685460261,
-   "loss_default": 0.2541775155555555,
+   "V_gossip": 0.11363379307005382,
+   "V_couple": 0.0,
+   "V_sac": 0.06224891895565913,
+   "loss_default": 0.25531683833333335,
    "loss_protected": 0.16406250055555557,
    "coupled_frac_default": 0.0,
-   "beta": 0.38239949589215616,
+   "beta": 0.373925017006576,
    "Nstar_0.25": 4.0,
    "Nstar_0.5": 3.0,
    "Nstar_0.75": 2.0
@@ -1725,38 +1725,38 @@
    "planet": "corrosion",
    "mission": "haul",
    "J_silent": 0.2804904561111111,
-   "J_gossip": 0.2838541727777778,
+   "J_gossip": 0.28464988033333327,
    "J_blackboard": 0.28381800366666665,
    "best_comm": "gossip",
-   "best_comm_margin": 3.616911111115062e-05,
+   "best_comm_margin": 0.00083187666666662,
    "V_comm": 0.01276610940070926,
-   "V_gossip": 0.006143837517369535,
-   "V_couple": -0.0112763615708633,
-   "V_sac": 0.09297339921762415,
-   "loss_default": 0.7688802111111112,
+   "V_gossip": 0.014191284650500104,
+   "V_couple": -0.0032345601316484582,
+   "V_sac": 0.101024159873963,
+   "loss_default": 0.769911025,
    "loss_protected": 0.6677336516666666,
-   "coupled_frac_default": 1.1723165666666667e-05,
-   "beta": 0.7973030584742355,
+   "coupled_frac_default": 1.133176161111111e-05,
+   "beta": 0.7696248778560184,
    "Nstar_0.25": 12.0,
-   "Nstar_0.5": 8.0,
+   "Nstar_0.5": 12.0,
    "Nstar_0.75": 4.0
   },
   {
    "planet": "corrosion",
    "mission": "escort",
    "J_silent": 0.52211233,
-   "J_gossip": 0.5437731377777778,
+   "J_gossip": 0.5450069322222222,
    "J_blackboard": 0.5464298422222222,
    "best_comm": "blackboard",
-   "best_comm_margin": 0.0026567044444444354,
+   "best_comm_margin": 0.001422910000000055,
    "V_comm": 0.015507362112448223,
-   "V_gossip": 0.006614407614486978,
-   "V_couple": 0.049252838784695156,
-   "V_sac": -0.005275279916709084,
-   "loss_default": 0.08942780700000001,
+   "V_gossip": 0.010741823874387477,
+   "V_couple": 0.053391477322672055,
+   "V_sac": -0.0011591614768293689,
+   "loss_default": 0.08828848433333332,
    "loss_protected": 0.054380064055555545,
-   "coupled_frac_default": 0.03189583227777778,
-   "beta": 0.05235112177586556,
+   "coupled_frac_default": 0.03217094383333333,
+   "beta": 0.02722754571103003,
    "Nstar_0.25": 2.0,
    "Nstar_0.5": 2.0,
    "Nstar_0.75": 2.0
@@ -1765,18 +1765,18 @@
    "planet": "jam",
    "mission": "search",
    "J_silent": 0.4250403211111111,
-   "J_gossip": 0.4468243538888889,
+   "J_gossip": 0.4458778105555556,
    "J_blackboard": 0.43782516055555554,
    "best_comm": "gossip",
-   "best_comm_margin": 0.008999193333333377,
+   "best_comm_margin": 0.00805265000000005,
    "V_comm": 0.029428650750064386,
-   "V_gossip": 0.048020490945715484,
-   "V_couple": 0.02728916922546722,
-   "V_sac": 0.000978385960115816,
+   "V_gossip": 0.04704006046649659,
+   "V_couple": 0.026312367308165663,
+   "V_sac": 0.0,
    "loss_default": 0.0,
    "loss_protected": 0.0,
-   "coupled_frac_default": 0.12086974305555555,
-   "beta": 0.41097709736085436,
+   "coupled_frac_default": 0.1208790262222222,
+   "beta": 0.40612570186030594,
    "Nstar_0.25": 4.0,
    "Nstar_0.5": 3.0,
    "Nstar_0.75": 2.0
@@ -1785,18 +1785,18 @@
    "planet": "jam",
    "mission": "haul",
    "J_silent": 0.3931930033333333,
-   "J_gossip": 0.39753328111111114,
+   "J_gossip": 0.3902271577777778,
    "J_blackboard": 0.38838253666666667,
-   "best_comm": "gossip",
-   "best_comm_margin": 0.004340277777777846,
+   "best_comm": "silent",
+   "best_comm_margin": 0.002965845555555513,
    "V_comm": -0.008832841000286801,
-   "V_gossip": 0.00988880291174245,
-   "V_couple": 0.1491042761994618,
-   "V_sac": 0.015386600320491625,
+   "V_gossip": -0.005497994320893693,
+   "V_couple": 0.1338419811671514,
+   "V_sac": 0.0,
    "loss_default": 0.0,
    "loss_protected": 0.0,
-   "coupled_frac_default": 0.27141867000000003,
-   "beta": 1.2603612446289545,
+   "coupled_frac_default": 0.26482023666666665,
+   "beta": 1.1708569277629481,
    "Nstar_0.25": 12.0,
    "Nstar_0.5": 12.0,
    "Nstar_0.75": 12.0
@@ -1805,18 +1805,18 @@
    "planet": "jam",
    "mission": "escort",
    "J_silent": 0.5580947127777778,
-   "J_gossip": 0.5854968327777779,
+   "J_gossip": 0.5813036444444445,
    "J_blackboard": 0.569914946111111,
    "best_comm": "gossip",
-   "best_comm_margin": 0.015581886666666822,
+   "best_comm_margin": 0.011388698333333447,
    "V_comm": 0.029887574367704364,
-   "V_gossip": 0.052602286320487544,
-   "V_couple": 0.16508848413022684,
-   "V_sac": 0.007779192009965738,
+   "V_gossip": 0.044834602165576554,
+   "V_couple": 0.15736358029769912,
+   "V_sac": 0.0,
    "loss_default": 0.0,
    "loss_protected": 0.0,
-   "coupled_frac_default": 0.5492858983333333,
-   "beta": 0.05547600741859889,
+   "coupled_frac_default": 0.5506828633333334,
+   "beta": 0.0317057066101858,
    "Nstar_0.25": 2.0,
    "Nstar_0.5": 2.0,
    "Nstar_0.75": 2.0
@@ -1825,18 +1825,18 @@
    "planet": "quake",
    "mission": "search",
    "J_silent": 0.42456957944444446,
-   "J_gossip": 0.4582065622222222,
+   "J_gossip": 0.4570930955555556,
    "J_blackboard": 0.4477461277777778,
    "best_comm": "gossip",
-   "best_comm_margin": 0.010460434444444444,
+   "best_comm_margin": 0.009346967777777826,
    "V_comm": 0.0493506102621472,
-   "V_gossip": 0.07115596582723689,
-   "V_couple": 0.012075427285775223,
-   "V_sac": -0.010584850042093861,
-   "loss_default": 0.00016276041666666666,
+   "V_gossip": 0.06972861925182999,
+   "V_couple": 0.010638853276460589,
+   "V_sac": -0.012021667839416453,
+   "loss_default": 0.00027126736111111107,
    "loss_protected": 7.233796666666667e-05,
-   "coupled_frac_default": 0.022981771499999998,
-   "beta": 0.446473678489636,
+   "coupled_frac_default": 0.023842851388888888,
+   "beta": 0.4435527982999807,
    "Nstar_0.25": 6.0,
    "Nstar_0.5": 3.0,
    "Nstar_0.75": 2.0
@@ -1845,18 +1845,18 @@
    "planet": "quake",
    "mission": "haul",
    "J_silent": 0.2978877355555556,
-   "J_gossip": 0.29380064361111113,
+   "J_gossip": 0.29289641083333334,
    "J_blackboard": 0.2933304377777778,
    "best_comm": "silent",
-   "best_comm_margin": 0.004087091944444454,
+   "best_comm_margin": 0.004557297777777802,
    "V_comm": -0.019699184037537162,
-   "V_gossip": -0.01625895639927811,
-   "V_couple": 0.14936113317842376,
-   "V_sac": 0.00928873046787142,
-   "loss_default": 0.007161458283333334,
+   "V_gossip": -0.02285424335863358,
+   "V_couple": 0.14284794670966153,
+   "V_sac": 0.002692973856565102,
+   "loss_default": 0.009006076255555556,
    "loss_protected": 0.008463541733333331,
-   "coupled_frac_default": 0.07264100038888889,
-   "beta": 1.2921386065048626,
+   "coupled_frac_default": 0.07314106488888888,
+   "beta": 1.25032872683303,
    "Nstar_0.25": 12.0,
    "Nstar_0.5": 12.0,
    "Nstar_0.75": 12.0
@@ -1865,18 +1865,18 @@
    "planet": "quake",
    "mission": "escort",
    "J_silent": 0.4176583588888889,
-   "J_gossip": 0.51069761,
+   "J_gossip": 0.5034501650000001,
    "J_blackboard": 0.49732736499999997,
    "best_comm": "gossip",
-   "best_comm_margin": 0.013370245000000058,
+   "best_comm_margin": 0.006122800000000095,
    "V_comm": 0.12210018050659742,
-   "V_gossip": 0.1553047477761693,
-   "V_couple": -0.005452431767167846,
-   "V_sac": -0.0018144728135587873,
-   "loss_default": 0.0808557585,
+   "V_gossip": 0.14117438303178698,
+   "V_couple": -0.019848825417091362,
+   "V_sac": -0.0162254203908395,
+   "loss_default": 0.07825159116666668,
    "loss_protected": 0.015100549688888888,
-   "coupled_frac_default": 0.2594277866666667,
-   "beta": -0.0209742623857257,
+   "coupled_frac_default": 0.26007562777777776,
+   "beta": -0.026715230427765402,
    "Nstar_0.25": 2.0,
    "Nstar_0.5": 2.0,
    "Nstar_0.75": 2.0
@@ -1885,38 +1885,38 @@
    "planet": "combined",
    "mission": "search",
    "J_silent": 0.4006278861111111,
-   "J_gossip": 0.4441398905555555,
+   "J_gossip": 0.443536595,
    "J_blackboard": 0.44204390666666665,
    "best_comm": "gossip",
-   "best_comm_margin": 0.002095983888888875,
+   "best_comm_margin": 0.0014926883333333252,
    "V_comm": 0.09286063853395421,
-   "V_gossip": 0.09625841818991158,
-   "V_couple": 0.018280030667089,
-   "V_sac": 0.061148559537838855,
-   "loss_default": 0.1880063661111111,
+   "V_gossip": 0.09560875752056475,
+   "V_couple": 0.01761687217872476,
+   "V_sac": 0.06048417779245662,
+   "loss_default": 0.18532986222222222,
    "loss_protected": 0.12758608283333336,
-   "coupled_frac_default": 0.10244686766666666,
-   "beta": 0.45632640193866214,
+   "coupled_frac_default": 0.10160939988888888,
+   "beta": 0.45591678481875014,
    "Nstar_0.25": 6.0,
-   "Nstar_0.5": 3.0,
+   "Nstar_0.5": 4.0,
    "Nstar_0.75": 2.0
   },
   {
    "planet": "combined",
    "mission": "haul",
    "J_silent": 0.2034866923888889,
-   "J_gossip": 0.20905671050000002,
+   "J_gossip": 0.20876735905555557,
    "J_blackboard": 0.20337818466666668,
    "best_comm": "gossip",
-   "best_comm_margin": 0.00557001811111113,
+   "best_comm_margin": 0.0052806666666666835,
    "V_comm": 0.018437832045402926,
-   "V_gossip": 0.058632781431721875,
-   "V_couple": 0.14862114415810343,
-   "V_sac": 0.04923836499210079,
-   "loss_default": 0.6736111088888889,
+   "V_gossip": 0.036358804202049747,
+   "V_couple": 0.12611635491752574,
+   "V_sac": 0.026761169387514012,
+   "loss_default": 0.6684570299999999,
    "loss_protected": 0.640787755,
-   "coupled_frac_default": 0.29505748055555553,
-   "beta": 1.3639272920512486,
+   "coupled_frac_default": 0.29380257055555553,
+   "beta": 1.2921989808965477,
    "Nstar_0.25": 12.0,
    "Nstar_0.5": 12.0,
    "Nstar_0.75": 12.0
@@ -1925,18 +1925,18 @@
    "planet": "combined",
    "mission": "escort",
    "J_silent": 0.27333879416666673,
-   "J_gossip": 0.33374333466666667,
+   "J_gossip": 0.32629531888888885,
    "J_blackboard": 0.3253546386666667,
    "best_comm": "gossip",
-   "best_comm_margin": 0.008388695999999973,
+   "best_comm_margin": 0.0009406802222221566,
    "V_comm": 0.13283137513966942,
-   "V_gossip": 0.1627772738003052,
-   "V_couple": 0.1109598535298527,
-   "V_sac": 0.041300686887541925,
-   "loss_default": 0.21808087566666667,
+   "V_gossip": 0.13441720860779802,
+   "V_couple": 0.08216496464733668,
+   "V_sac": 0.012428085543786238,
+   "loss_default": 0.21610966455555558,
    "loss_protected": 0.051685474611111115,
-   "coupled_frac_default": 0.5840012616666667,
-   "beta": 0.06710562583889852,
+   "coupled_frac_default": 0.5862626022222223,
+   "beta": 0.024245981665360208,
    "Nstar_0.25": 2.0,
    "Nstar_0.5": 2.0,
    "Nstar_0.75": 2.0
@@ -1944,16 +1944,16 @@
  ],
  "outcome_means_adv": {
   "V_comm": 0.04483255108916376,
-  "V_gossip": 0.06385450914767442,
-  "V_couple": 0.06790003371521465,
-  "V_sac": 0.027013765430601223,
-  "beta": 0.5469887806656872,
-  "Nstar_0.25": 6.361111111111111,
-  "Nstar_0.5": 5.444444444444445,
-  "Nstar_0.75": 4.555555555555555,
-  "loss_default": 0.19003032179444446,
+  "V_gossip": 0.05661475826345973,
+  "V_couple": 0.06060091768972147,
+  "V_sac": 0.01968610297523823,
+  "beta": 0.5182494849077472,
+  "Nstar_0.25": 6.5,
+  "Nstar_0.5": 5.5,
+  "Nstar_0.75": 4.472222222222222,
+  "loss_default": 0.18924515326898148,
   "loss_protected": 0.14415599650925925,
-  "coupled_frac_default": 0.19250316960639816
+  "coupled_frac_default": 0.19227487654494904
  },
  "ambiguity_resolutions": {
   "n_average": "Outcomes average over n in {4,6,8} with nanmean: if some n are missing the mean is over the n present (column n_cov_<outcome> counts them). Seed-mean J first, then rel(), then mean over n.",
